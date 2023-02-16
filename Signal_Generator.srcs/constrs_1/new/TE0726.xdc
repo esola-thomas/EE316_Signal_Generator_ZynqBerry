@@ -4,7 +4,8 @@
 #set_property IOSTANDARD LVCMOS33 [get_ports {GPIO_1_tri_io[*]}]
 ## GPIO Pins
 ## GPIO2
-#set_property PACKAGE_PIN K15 [get_ports {GPIO_1_tri_io[0]}]
+set_property PACKAGE_PIN K15 [get_ports {BTN0}]
+set_property IOSTANDARD LVCMOS33 [get_ports BTN0]
 ## GPIO3
 #set_property PACKAGE_PIN J14 [get_ports {GPIO_1_tri_io[1]}]
 ## GPIO4

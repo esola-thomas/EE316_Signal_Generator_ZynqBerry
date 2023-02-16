@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:C:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc rfile:../../../Signal_Generator.srcs/constrs_1/new/TE0726.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN K15 [get_ports {BTN0}]
+set_property src_info {type:XDC file:1 line:90 export:INPUT save:INPUT read:READ} [current_design]
+set_property IOSTANDARD LVCMOS33 [get_ports PWM_*]
