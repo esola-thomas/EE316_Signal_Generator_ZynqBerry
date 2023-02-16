@@ -7,12 +7,12 @@
       "name": "top_level",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2022.2",
-      "validated": "true"
+      "tool_version": "2022.2"
     },
     "design_tree": {
       "processing_system7_0": "",
-      "btn_debounce_toggle_0": ""
+      "btn_debounce_toggle_0": "",
+      "StateMachine_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -728,6 +728,44 @@
             "direction": "O"
           }
         }
+      },
+      "StateMachine_0": {
+        "vlnv": "xilinx.com:module_ref:StateMachine:1.0",
+        "xci_name": "top_level_StateMachine_0_0",
+        "xci_path": "ip\\top_level_StateMachine_0_0\\top_level_StateMachine_0_0.xci",
+        "inst_hier_path": "StateMachine_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "StateMachine",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "cycle": {
+            "direction": "I"
+          },
+          "state_fix": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "clkon": {
+            "direction": "O"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -754,7 +792,14 @@
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",
-          "btn_debounce_toggle_0/CLK"
+          "btn_debounce_toggle_0/CLK",
+          "StateMachine_0/clk"
+        ]
+      },
+      "processing_system7_0_FCLK_RESET0_N": {
+        "ports": [
+          "processing_system7_0/FCLK_RESET0_N",
+          "StateMachine_0/reset"
         ]
       }
     }

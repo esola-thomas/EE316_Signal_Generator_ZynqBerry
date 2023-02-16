@@ -1,21 +1,23 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-85,-132",
+   "Default View_TopLeft":"-298,-133",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 3 -x 600 -y 60 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 3 -x 600 -y 220 -defaultsOSRD
-preplace port port-id_BTN0 -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -x 170 -y 90 -defaultsOSRD
-preplace inst btn_debounce_toggle_0 -pg 1 -lvl 2 -x 460 -y 140 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 1 1 320 100n
-preplace netloc BTN0_1 1 0 2 NJ 180 340J
-preplace netloc processing_system7_0_DDR 1 1 2 NJ 60 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 1 2 330J 220 NJ
-levelinfo -pg 1 0 170 460 600
-pagesize -pg 1 -db -bbox -sgen -90 0 720 240
+preplace port DDR -pg 1 -lvl 3 -x 610 -y 60 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 3 -x 610 -y 220 -defaultsOSRD
+preplace port port-id_BTN0 -pg 1 -lvl 0 -x -10 -y 180 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 160 -y 130 -defaultsOSRD
+preplace inst btn_debounce_toggle_0 -pg 1 -lvl 2 -x 460 -y 20 -defaultsOSRD
+preplace inst StateMachine_0 -pg 1 -lvl 2 -x 460 -y 190 -defaultsOSRD
+preplace netloc BTN0_1 1 0 2 10J 10 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 1 320 30n
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 310 160n
+preplace netloc processing_system7_0_DDR 1 1 2 NJ 100 580J
+preplace netloc processing_system7_0_FIXED_IO 1 1 2 310J 110 580J
+levelinfo -pg 1 -10 160 460 610
+pagesize -pg 1 -db -bbox -sgen -100 -100 730 380
 "
 }
 {
