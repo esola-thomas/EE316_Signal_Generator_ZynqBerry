@@ -1,25 +1,30 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-298,-133",
+   "Default View_ScaleFactor":"0.82",
+   "Default View_TopLeft":"-382,0",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 3 -x 610 -y 60 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 3 -x 610 -y 220 -defaultsOSRD
-preplace port port-id_BTN0 -pg 1 -lvl 0 -x -10 -y 180 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -x 160 -y 130 -defaultsOSRD
-preplace inst btn_debounce_toggle_0 -pg 1 -lvl 2 -x 460 -y 20 -defaultsOSRD
-preplace inst StateMachine_0 -pg 1 -lvl 2 -x 460 -y 190 -defaultsOSRD
-preplace netloc BTN0_1 1 0 2 10J 10 NJ
-preplace netloc processing_system7_0_FCLK_CLK0 1 1 1 320 30n
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 310 160n
-preplace netloc processing_system7_0_DDR 1 1 2 NJ 100 580J
-preplace netloc processing_system7_0_FIXED_IO 1 1 2 310J 110 580J
-levelinfo -pg 1 -10 160 460 610
-pagesize -pg 1 -db -bbox -sgen -100 -100 730 380
+preplace port DDR -pg 1 -lvl 3 -x 650 -y 60 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 3 -x 650 -y 80 -defaultsOSRD
+preplace port port-id_BTN0 -pg 1 -lvl 0 -x 0 -y 510 -defaultsOSRD
+preplace port port-id_ADC_sda -pg 1 -lvl 3 -x 650 -y 200 -defaultsOSRD
+preplace port port-id_ADC_scl -pg 1 -lvl 3 -x 650 -y 220 -defaultsOSRD
+preplace inst btn_debounce_toggle_0 -pg 1 -lvl 2 -x 480 -y 520 -defaultsOSRD
+preplace inst StateMachine_0 -pg 1 -lvl 2 -x 480 -y 380 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 170 -y 90 -defaultsOSRD
+preplace inst adc_i2c_controller_0 -pg 1 -lvl 2 -x 480 -y 200 -defaultsOSRD
+preplace netloc BTN0_1 1 0 2 NJ 510 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 1 330 100n
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 320 120n
+preplace netloc Net 1 2 1 NJ 200
+preplace netloc Net1 1 2 1 NJ 220
+preplace netloc processing_system7_0_DDR 1 1 2 NJ 60 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 2 NJ 80 NJ
+levelinfo -pg 1 0 170 480 650
+pagesize -pg 1 -db -bbox -sgen -90 0 770 600
 "
 }
 {
-   "da_ps7_cnt":"3"
+   "da_ps7_cnt":"5"
 }

@@ -6,10 +6,16 @@
 # Block Designs: bd/top_level/top_level.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level || ORIG_REF_NAME==top_level} -quiet] -quiet
 
-# IP: bd/top_level/ip/top_level_processing_system7_0_2/top_level_processing_system7_0_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_processing_system7_0_2 || ORIG_REF_NAME==top_level_processing_system7_0_2} -quiet] -quiet
-
 # IP: bd/top_level/ip/top_level_btn_debounce_toggle_0_0/top_level_btn_debounce_toggle_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_btn_debounce_toggle_0_0 || ORIG_REF_NAME==top_level_btn_debounce_toggle_0_0} -quiet] -quiet
 
-# XDC: c:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/top_level_ooc.xdc
+# IP: bd/top_level/ip/top_level_StateMachine_0_0/top_level_StateMachine_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_StateMachine_0_0 || ORIG_REF_NAME==top_level_StateMachine_0_0} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_processing_system7_0_3/top_level_processing_system7_0_3.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_processing_system7_0_3 || ORIG_REF_NAME==top_level_processing_system7_0_3} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_adc_i2c_controller_0_0/top_level_adc_i2c_controller_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_adc_i2c_controller_0_0 || ORIG_REF_NAME==top_level_adc_i2c_controller_0_0} -quiet] -quiet
+
+# XDC: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/top_level_ooc.xdc

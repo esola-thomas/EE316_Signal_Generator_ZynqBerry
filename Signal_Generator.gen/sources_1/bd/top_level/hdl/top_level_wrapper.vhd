@@ -1,8 +1,8 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Thu Feb 16 13:14:24 2023
---Host        : CB195-UL-41 running 64-bit major release  (build 9200)
+--Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+--Date        : Fri Feb 17 14:53:10 2023
+--Host        : Alienware running 64-bit Ubuntu 22.04.2 LTS
 --Command     : generate_target top_level_wrapper.bd
 --Design      : top_level_wrapper
 --Purpose     : IP block netlist
@@ -13,6 +13,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity top_level_wrapper is
   port (
+    ADC_scl : inout STD_LOGIC;
+    ADC_sda : inout STD_LOGIC;
     BTN0 : in STD_LOGIC;
     DDR_addr : inout STD_LOGIC_VECTOR ( 14 downto 0 );
     DDR_ba : inout STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -41,6 +43,7 @@ end top_level_wrapper;
 architecture STRUCTURE of top_level_wrapper is
   component top_level is
   port (
+    BTN0 : in STD_LOGIC;
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -62,12 +65,15 @@ architecture STRUCTURE of top_level_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    BTN0 : in STD_LOGIC
+    ADC_sda : inout STD_LOGIC;
+    ADC_scl : inout STD_LOGIC
   );
   end component top_level;
 begin
 top_level_i: component top_level
      port map (
+      ADC_scl => ADC_scl,
+      ADC_sda => ADC_sda,
       BTN0 => BTN0,
       DDR_addr(14 downto 0) => DDR_addr(14 downto 0),
       DDR_ba(2 downto 0) => DDR_ba(2 downto 0),

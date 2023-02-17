@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/synth_1/top_level_wrapper.tcl"
+  variable script "/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/synth_1/top_level_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 3
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg225-1
 
@@ -78,19 +77,18 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/Signal_Generator.cache/wt [current_project]
-set_property parent.project_path C:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/Signal_Generator.xpr [current_project]
+set_property webtalk.parent_dir /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.cache/wt [current_project]
+set_property parent.project_path /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property board_part trenz.biz:te0726_10_1c:part0:2.1 [current_project]
-set_property ip_output_repo c:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/Signal_Generator.cache/ip [current_project]
+set_property ip_output_repo /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib c:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hdl/top_level_wrapper.vhd
-add_files C:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd
-set_property used_in_implementation false [get_files -all c:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_processing_system7_0_2/top_level_processing_system7_0_2.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/top_level_ooc.xdc]
+read_vhdl -library xil_defaultlib /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hdl/top_level_wrapper.vhd
+add_files /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd
+set_property used_in_implementation false [get_files -all /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_processing_system7_0_3/top_level_processing_system7_0_3.xdc]
+set_property used_in_implementation false [get_files -all /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/top_level_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -101,14 +99,14 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc
-set_property used_in_implementation false [get_files C:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc]
+read_xdc /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc
+set_property used_in_implementation false [get_files /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/utils_1/imports/synth_1/ADC_user_logic.dcp
+read_checkpoint -auto_incremental -incremental /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/utils_1/imports/synth_1/ADC_user_logic.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

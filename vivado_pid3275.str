@@ -1,0 +1,613 @@
+/*
+
+Xilinx Vivado v2022.2 (64-bit) [Major: 2022, Minor: 2]
+SW Build: 3671981 on Fri Oct 14 04:59:54 MDT 2022
+IP Build: 3669848 on Fri Oct 14 08:30:02 MDT 2022
+
+Process ID (PID): 3275
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Fri Feb 17 14:07:25 EST 2023
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Ubuntu
+OS Version: 5.15.79.1-microsoft-standard-WSL2
+OS Architecture: amd64
+Available processors (cores): 12
+
+Display: 0
+Screen size: 3840x2160
+Screen resolution (DPI): 100
+Available screens: 3
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	/tools/Xilinx/Vivado/2022.2/tps/lnx64/jre11.0.11_9
+Java executable: 	/tools/Xilinx/Vivado/2022.2/tps/lnx64/jre11.0.11_9/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m, -Xrs]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	ernesto
+User home directory: /home/ernesto
+User working directory: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2022.2
+RDI_DATADIR: /tools/Xilinx/Vivado/2022.2/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2022.2/bin
+
+Vivado preferences file: /home/ernesto/.Xilinx/Vivado/2022.2/vivado.xml
+Vivado preferences directory: /home/ernesto/.Xilinx/Vivado/2022.2/
+Vivado layouts directory: /home/ernesto/.Xilinx/Vivado/2022.2/data/layouts
+PlanAhead jar file: 	/tools/Xilinx/Vivado/2022.2/lib/classes/planAhead.jar
+Vivado log file: 	/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/vivado.log
+Vivado journal file: 	/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-3275-Alienware
+
+Xilinx Environment Variables
+----------------------------
+RDI_APPROOT: /tools/Xilinx/Vivado/2022.2
+RDI_BASEROOT: /tools/Xilinx/Vivado
+RDI_BINROOT: /tools/Xilinx/Vivado/2022.2/bin
+RDI_BUILD: yes
+RDI_DATADIR: /tools/Xilinx/Vivado/2022.2/data
+RDI_INSTALLROOT: /tools/Xilinx
+RDI_INSTALLVER: 2022.2
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 11.0.11_9
+RDI_LIBDIR: /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/Ubuntu:/tools/Xilinx/Vivado/2022.2/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /tools/Xilinx/Vitis/2022.2/bin:/tools/Xilinx/Vivado/2022.2/ids_lite/ISE/bin/lin64
+RDI_PROG: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/vivado
+RDI_TPS_ROOT: /tools/Xilinx/Vivado/2022.2/tps/lnx64
+RDI_USE_JDK11: True
+XILINX: /tools/Xilinx/Vivado/2022.2/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2022.2/ids_lite/ISE
+XILINX_HLS: /tools/Xilinx/Vitis_HLS/2022.2
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2022.2
+XILINX_SDK: /tools/Xilinx/Vitis/2022.2
+XILINX_VITIS: /tools/Xilinx/Vitis/2022.2
+XILINX_VIVADO: /tools/Xilinx/Vivado/2022.2
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2022.2
+
+
+GUI allocated memory:	308 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,540 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,542 MB. GUI used memory: 97 MB. Current time: 2/17/23, 2:07:26 PM EST
+selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // u
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,595 MB. GUI used memory: 113 MB. Current time: 2/17/23, 2:07:56 PM EST
+// Elapsed time: 11 seconds
+setFileChooser("/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.xpr");
+// [GUI Memory]: 121 MB (+124481kb) [00:00:48]
+// [Engine Memory]: 1,596 MB (+1522354kb) [00:00:48]
+// Opening Vivado Project: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.xpr. Version: Vivado v2022.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 170 MB (+44495kb) [00:00:50]
+// [Engine Memory]: 1,677 MB (+807kb) [00:00:50]
+// WARNING: HEventQueue.dispatchEvent() is taking  2295 ms.
+// Tcl Message: open_project /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'. 
+// Project name: Signal_Generator; location: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry; part: xc7z010clg225-1
+dismissDialog("Open Project"); // bq
+// [GUI Memory]: 179 MB (+1172kb) [00:00:53]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,811 MB. GUI used memory: 117 MB. Current time: 2/17/23, 2:08:11 PM EST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// [Engine Memory]: 1,827 MB (+69371kb) [00:01:01]
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 112 seconds
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_CHANGED_MODULES, "Refresh Changed Modules"); // g
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: LOAD_FEATURE
+// Tcl Message: update_module_reference top_level_StateMachine_0_0 
+// Tcl Message: INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository). INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository). INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'. 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: Reading block design file </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd>... 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_OPEN_DIAGRAM
+// WARNING: HEventQueue.dispatchEvent() is taking  1212 ms.
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0 Adding component instance block -- xilinx.com:module_ref:btn_debounce_toggle:1.0 - btn_debounce_toggle_0 Adding component instance block -- xilinx.com:module_ref:StateMachine:1.0 - StateMachine_0 Successfully read diagram <top_level> from block design file </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // t
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: Upgrading '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd' 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: INFO: [IP_Flow 19-3420] Updated top_level_StateMachine_0_0 to use current project options 
+// Tcl Message: Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd>  Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui>  
+dismissDialog("Refresh IP Catalog"); // bq
+// HMemoryUtils.trashcanNow. Engine heap size: 1,870 MB. GUI used memory: 120 MB. Current time: 2/17/23, 2:10:06 PM EST
+selectButton(PAResourceQtoS.SystemTab_UPGRADE_LATER, "Upgrade Later"); // g
+selectButton("OptionPane.button", "OK"); // JButton
+selectTab((HResource) null, (HResource) null, "Reports", 3); // aa
+selectTreeTable(PAResourceEtoH.ExpReportTreePanel_EXP_REPORT_TREE_TABLE, "Utilization - Synth Design ; report_utilization ;  ; Fri Feb 17 13:53:58 EST 2023 ; 7726", 2, "Utilization - Synth Design", 0, false); // J
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_intf_nets processing_system7_0_DDR] [get_bd_intf_nets processing_system7_0_FIXED_IO] [get_bd_nets processing_system7_0_FCLK_RESET0_N] [get_bd_cells processing_system7_0] 
+// Elapsed time: 11 seconds
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // B
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "proces"); // OverlayTextField
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Processor System Reset", 3, "Processor System Reset", 0, false); // z
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "ZYNQ7 Processing System", 5, "ZYNQ7 Processing System", 0, false); // z
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "ZYNQ7 Processing System", 5); // z
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "ZYNQ7 Processing System", 5, "ZYNQ7 Processing System", 0, false, false, false, false, false, true); // z - Double Click
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // bq
+// JavaFX intialization before: 1676661040590
+// JavaFX initialization after: 1676661040792
+// WARNING: HTimer (Open addressing views timer) is taking 260ms to process. Increasing delay to 1300 ms.
+// [Engine Memory]: 1,924 MB (+6201kb) [00:03:27]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,995 MB. GUI used memory: 125 MB. Current time: 2/17/23, 2:10:41 PM EST
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// [Engine Memory]: 2,127 MB (+111315kb) [00:03:28]
+dismissDialog("Re-customize IP"); // C
+selectTreeTable(PAResourceEtoH.GenSettingTreeTablePanel_GEN_SETTING_TREE_TABLE, "M AXI GP0 interface ; 1 ; Enables General purpose AXI master interface 0", 3, "1", 1, true); // ae - Node
+selectButton("Peripheral I/O Pins", "Peripheral I/O Pins"); // j
+selectTreeTable(PAResourceItoN.MIOTablePagePanel_MIO_TABLE, " ;  ;  ;  ;  ;  ;  ;  ; UART1 ;  ;  ;  ; UART1 ;  ;  ;  ; UART1 ;  ;  ;  ; UART1 ;  ;  ;  ; UART1 ;  ;  ;  ; UART1 ;  ;  ;  ; UART1 ;  ;  ;  ; UART1 ;  ;  ;  ; UART1 ;  ;  ;  ; UART1 ;  ;  ;  ; UART1 ;  ;  ;  ; UART1 ;  ; EMIO ; UART 1", 12, (String) null, 10, true); // aF.a - Node
+selectButton("UART1", "UART1"); // al
+selectButton("MIO Configuration", "MIO Configuration"); // j
+expandTreeTable(PAResourceItoN.MIOConfigTreeTablePanel_MIO_CONFIG_TREE_TABLE, "I/O Peripherals ; I/O Peripherals ; I/O Peripherals ; I/O Peripherals ; I/O Peripherals ; I/O Peripherals ; I/O Peripherals ; I/O Peripherals", 1); // as
+selectButton("Clock Configuration", "Clock Configuration"); // j
+expandTreeTable(PAResourceAtoD.ClkConfigTreeTablePanel_CLK_CONFIG_TREE_TABLE, "PL Fabric Clocks ; PL Fabric Clocks ; PL Fabric Clocks ; PL Fabric Clocks ; PL Fabric Clocks ; PL Fabric Clocks", 2); // r
+// [GUI Memory]: 230 MB (+43631kb) [00:03:56]
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // m
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property -dict [list \   CONFIG.PCW_UART1_PERIPHERAL_ENABLE {1} \   CONFIG.PCW_UART1_UART1_IO {MIO 8 .. 9} \   CONFIG.PCW_USE_M_AXI_GP0 {0} \ ] [get_bd_cells processing_system7_0] 
+// Tcl Command: 'set_property location {1 158 -41} [get_bd_cells processing_system7_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1 158 -41} [get_bd_cells processing_system7_0] 
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_BLOCK_AUTOMATION, "Run Block Automation"); // g
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Run Block Automation"); // B
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0] 
+// [GUI Memory]: 249 MB (+7610kb) [00:04:13]
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_intf_nets processing_system7_0_DDR] [get_bd_intf_ports DDR_0] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_intf_ports DDR] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_intf_ports FIXED_IO] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_intf_nets processing_system7_0_FIXED_IO] [get_bd_intf_ports FIXED_IO_0] 
+// Elapsed time: 14 seconds
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_BLOCK_AUTOMATION, "Run Block Automation"); // g
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Run Block Automation"); // B
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins btn_debounce_toggle_0/CLK] 
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+selectButton(PAResourceQtoS.SystemBuilderView_OPTIMIZE_ROUTING, "System_RSB_OPTIMIZE_LAYOUT"); // B
+// Tcl Command: 'regenerate_bd_layout -routing'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_ROUTE_LAYOUT
+// Tcl Message: regenerate_bd_layout -routing 
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+selectButton(PAResourceQtoS.SystemBuilderView_OPTIMIZE_ROUTING, "System_RSB_OPTIMIZE_LAYOUT"); // B
+// Tcl Command: 'regenerate_bd_layout -routing'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_ROUTE_LAYOUT
+// Tcl Message: regenerate_bd_layout -routing 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,105 MB. GUI used memory: 183 MB. Current time: 2/17/23, 2:40:41 PM EST
+// Elapsed time: 2003 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aa
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files]", 4); // D
+// PAPropertyPanels.initPanels (adc_i2c_controller.vhd) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files, adc_i2c_controller.vhd]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files, adc_i2c_controller.vhd]", 5, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 91 seconds
+selectCodeEditor("adc_i2c_controller.vhd", 326, 280); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files, adc_i2c_controller.vhd]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files, adc_i2c_controller.vhd]", 5, false, false, false, false, false, true); // D - Double Click
+// [Engine Memory]: 2,237 MB (+4206kb) [00:39:38]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,227 MB. GUI used memory: 186 MB. Current time: 2/17/23, 2:46:56 PM EST
+// Elapsed time: 15 seconds
+selectCodeEditor("adc_i2c_controller.vhd", 126, 266); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 126, 266, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("adc_i2c_controller.vhd", 268, 291); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,244 MB. GUI used memory: 186 MB. Current time: 2/17/23, 2:47:36 PM EST
+// Elapsed time: 34 seconds
+selectCodeEditor("adc_i2c_controller.vhd", 127, 305); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 127, 305, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 29 seconds
+selectCodeEditor("adc_i2c_controller.vhd", 44, 226); // ac
+// Elapsed time: 21 seconds
+selectCodeEditor("adc_i2c_controller.vhd", 40, 234); // ac
+typeControlKey((HResource) null, "adc_i2c_controller.vhd", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("adc_i2c_controller.vhd", 66, 277); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 66, 277, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("adc_i2c_controller.vhd", 159, 346); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 359, 370); // ac
+// Elapsed time: 14 seconds
+selectCodeEditor("adc_i2c_controller.vhd", 590, 205); // ac
+typeControlKey((HResource) null, "adc_i2c_controller.vhd", 'v'); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 29, 216); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 579, 216); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 579, 216, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("adc_i2c_controller.vhd", 567, 216); // ac
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "adc_i2c_controller.vhd", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+selectCodeEditor("adc_i2c_controller.vhd", 158, 248); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 159, 248, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("adc_i2c_controller.vhd", 74, 263); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 74, 263, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("adc_i2c_controller.vhd", 64, 282); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 64, 282, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "adc_i2c_controller.vhd", 'c'); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 155, 385); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 155, 385, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "adc_i2c_controller.vhd", 'v'); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 187, 293); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 285, 288); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 158, 308); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 45, 234); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 45, 234, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "adc_i2c_controller.vhd", 'c'); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 143, 308); // ac
+typeControlKey((HResource) null, "adc_i2c_controller.vhd", 'v'); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 111, 309); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 198, 308); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 201, 308); // ac
+typeControlKey((HResource) null, "adc_i2c_controller.vhd", 'c'); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 143, 340); // ac
+typeControlKey((HResource) null, "adc_i2c_controller.vhd", 'v'); // ac
+typeControlKey((HResource) null, "adc_i2c_controller.vhd", 'v'); // ac
+// Elapsed time: 19 seconds
+selectCodeEditor("adc_i2c_controller.vhd", 155, 274); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 350, 369); // ac
+selectCodeEditor("adc_i2c_controller.vhd", 80, 382); // ac
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,310 MB. GUI used memory: 186 MB. Current time: 2/17/23, 2:51:41 PM EST
+// Elapsed time: 25 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+closeView(PAResourceOtoP.PAViews_ADDRESS_MAP, "Address Map"); // AddressMapHtml
+closeView(PAResourceOtoP.PAViews_ADDRESS_EDITOR, "Address Editor"); // c
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, adc_i2c_controller(Behavioral) (adc_i2c_controller.vhd)]", 5, true); // D - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, adc_i2c_controller(Behavioral) (adc_i2c_controller.vhd)]", 5); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, adc_i2c_controller(Behavioral) (adc_i2c_controller.vhd)]", 5); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, adc_i2c_controller(Behavioral) (adc_i2c_controller.vhd)]", 5, true); // D - Node
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: create_bd_cell -type module -reference adc_i2c_controller adc_i2c_controller_0 
+// Tcl Message: INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository). INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository). 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Command: 'set_property location {2 470 403} [get_bd_cells adc_i2c_controller_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {2 470 403} [get_bd_cells adc_i2c_controller_0] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins adc_i2c_controller_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins adc_i2c_controller_0/reset_n] [get_bd_pins processing_system7_0/FCLK_RESET0_N] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins StateMachine_0/reset] [get_bd_pins processing_system7_0/FCLK_RESET0_N] 
+// Elapsed time: 21 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 653, 370, 1180, 526, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "ADC_sda"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Port"); // aL
+// Tcl Message: startgroup 
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: create_bd_port -dir IO ADC_sda 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins /adc_i2c_controller_0/sda] [get_bd_ports ADC_sda] 
+// Tcl Message: endgroup 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 725, 396, 1180, 526, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+// Elapsed time: 10 seconds
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "ADC_scl"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Port"); // aL
+// Tcl Message: startgroup 
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: create_bd_port -dir IO ADC_scl 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins /adc_i2c_controller_0/scl] [get_bd_ports ADC_scl] 
+// Tcl Message: endgroup 
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+selectButton(PAResourceQtoS.SystemBuilderView_OPTIMIZE_ROUTING, "System_RSB_OPTIMIZE_LAYOUT"); // B
+// Tcl Command: 'regenerate_bd_layout -routing'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_ROUTE_LAYOUT
+// Tcl Message: regenerate_bd_layout -routing 
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // ac
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "Run Synthesis"); // ao
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+dismissDialog("Run Synthesis"); // u
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+dismissDialog("Save Project"); // W.d
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd>  Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui>  
+dismissDialog("Save Constraints"); // bq
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+dismissDialog("Synthesis is Out-of-date"); // u
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/utils_1/imports/synth_1/ADC_user_logic.dcp with file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/synth_1/top_level_wrapper.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// 'cw' command handler elapsed time: 4 seconds
+dismissDialog("Launch Runs"); // cz
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 12 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,338 MB. GUI used memory: 182 MB. Current time: 2/17/23, 2:53:06 PM EST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd>  
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 2,428 MB (+82511kb) [00:45:56]
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.vhd VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/sim/top_level.vhd VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hdl/top_level_wrapper.vhd 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block StateMachine_0 . 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_i2c_controller_0 . 
+// Tcl Message: Exporting to file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hw_handoff/top_level.hwh Generated Hardware Definition File /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.hwdef 
+// Tcl Message: INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8 INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_level_StateMachine_0_0 INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_level_adc_i2c_controller_0_0 INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork() INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_level_StateMachine_0_0 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_level_adc_i2c_controller_0_0 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,528 MB. GUI used memory: 182 MB. Current time: 2/17/23, 2:53:26 PM EST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,560 MB. GUI used memory: 182 MB. Current time: 2/17/23, 2:53:34 PM EST
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:54 ; elapsed = 00:00:32 . Memory (MB): peak = 8884.793 ; gain = 230.266 ; free physical = 2256 ; free virtual = 7004 
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 38 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Launch Run Critical Messages"); // aX
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 264 MB (+2893kb) [00:47:11]
+// [Engine Memory]: 2,598 MB (+51688kb) [00:47:11]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,696 MB. GUI used memory: 243 MB. Current time: 2/17/23, 2:54:26 PM EST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 293 MB (+16725kb) [00:47:21]
+// Elapsed time: 52 seconds
+selectTab((HResource) null, (HResource) null, "Design Runs", 4); // aa
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 346 MB (+39875kb) [00:47:55]
+// Elapsed time: 39 seconds
+expandTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "top_level ;  ; Submodule Runs Failed ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Fri Feb 17 13:53:58 EST 2023 ; 01:00:42 ;  ;  ;  ;  ; ", 4); // ao
+selectTreeTableHeader(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "Constraints", 1); // ao
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "top_level_adc_i2c_controller_0_0_synth_1 ; top_level_adc_i2c_controller_0_0 ; synth_design ERROR ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Fri Feb 17 14:53:37 EST 2023 ; 00:00:39 ; Vivado Synthesis Defaults (Vivado Synthesis 2022) ; Vivado Synthesis Default Reports (Vivado Synthesis 2022) ; xc7z010clg225-1 ; Alienware ; Vivado Synthesis Defaults", 7, "top_level_adc_i2c_controller_0_0", 1, false); // ao
+// PAPropertyPanels.initPanels (top_level_adc_i2c_controller_0_0_synth_1) elapsed time: 0.3s
+// Elapsed time: 17 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_CLOSE_PROJECT, "Close Project"); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+// Run Command: PAResourceCommand.PACommandNames_CLOSE_PROJECT
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Close Project"); // u
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,449 MB. GUI used memory: 171 MB. Current time: 2/17/23, 2:55:49 PM EST
+// Tcl Message: close_project 
+dismissDialog("Close Project"); // bq

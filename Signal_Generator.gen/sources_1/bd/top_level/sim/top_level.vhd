@@ -1,8 +1,8 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Thu Feb 16 13:14:24 2023
---Host        : CB195-UL-41 running 64-bit major release  (build 9200)
+--Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+--Date        : Fri Feb 17 14:53:10 2023
+--Host        : Alienware running 64-bit Ubuntu 22.04.2 LTS
 --Command     : generate_target top_level.bd
 --Design      : top_level
 --Purpose     : IP block netlist
@@ -13,6 +13,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity top_level is
   port (
+    ADC_scl : inout STD_LOGIC;
+    ADC_sda : inout STD_LOGIC;
     BTN0 : in STD_LOGIC;
     DDR_addr : inout STD_LOGIC_VECTOR ( 14 downto 0 );
     DDR_ba : inout STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -37,13 +39,31 @@ entity top_level is
     FIXED_IO_ps_srstb : inout STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of top_level : entity is "top_level,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_level,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=2,numReposBlks=2,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_ps7_cnt=3,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of top_level : entity is "top_level,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_level,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=4,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_ps7_cnt=5,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of top_level : entity is "top_level.hwdef";
 end top_level;
 
 architecture STRUCTURE of top_level is
-  component top_level_processing_system7_0_2 is
+  component top_level_btn_debounce_toggle_0_0 is
+  port (
+    BTN_I : in STD_LOGIC;
+    CLK : in STD_LOGIC;
+    BTN_O : out STD_LOGIC;
+    TOGGLE_O : out STD_LOGIC;
+    PULSE_O : out STD_LOGIC
+  );
+  end component top_level_btn_debounce_toggle_0_0;
+  component top_level_StateMachine_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    cycle : in STD_LOGIC;
+    state_fix : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    clkon : out STD_LOGIC
+  );
+  end component top_level_StateMachine_0_0;
+  component top_level_processing_system7_0_3 is
   port (
     FCLK_CLK0 : out STD_LOGIC;
     FCLK_RESET0_N : out STD_LOGIC;
@@ -69,17 +89,24 @@ architecture STRUCTURE of top_level is
     PS_CLK : inout STD_LOGIC;
     PS_PORB : inout STD_LOGIC
   );
-  end component top_level_processing_system7_0_2;
-  component top_level_btn_debounce_toggle_0_0 is
+  end component top_level_processing_system7_0_3;
+  component top_level_adc_i2c_controller_0_0 is
   port (
-    BTN_I : in STD_LOGIC;
-    CLK : in STD_LOGIC;
-    BTN_O : out STD_LOGIC;
-    TOGGLE_O : out STD_LOGIC;
-    PULSE_O : out STD_LOGIC
+    clk : in STD_LOGIC;
+    reset_n : in STD_LOGIC;
+    analog_o_en : in STD_LOGIC;
+    AIN_mode : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    AIN_sel : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    rw : in STD_LOGIC;
+    ADC_wr : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    data_rd : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    sda : inout STD_LOGIC;
+    scl : inout STD_LOGIC
   );
-  end component top_level_btn_debounce_toggle_0_0;
+  end component top_level_adc_i2c_controller_0_0;
   signal BTN0_1 : STD_LOGIC;
+  signal Net : STD_LOGIC;
+  signal Net1 : STD_LOGIC;
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system7_0_DDR_CAS_N : STD_LOGIC;
@@ -96,16 +123,19 @@ architecture STRUCTURE of top_level is
   signal processing_system7_0_DDR_RESET_N : STD_LOGIC;
   signal processing_system7_0_DDR_WE_N : STD_LOGIC;
   signal processing_system7_0_FCLK_CLK0 : STD_LOGIC;
+  signal processing_system7_0_FCLK_RESET0_N : STD_LOGIC;
   signal processing_system7_0_FIXED_IO_DDR_VRN : STD_LOGIC;
   signal processing_system7_0_FIXED_IO_DDR_VRP : STD_LOGIC;
   signal processing_system7_0_FIXED_IO_MIO : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal processing_system7_0_FIXED_IO_PS_CLK : STD_LOGIC;
   signal processing_system7_0_FIXED_IO_PS_PORB : STD_LOGIC;
   signal processing_system7_0_FIXED_IO_PS_SRSTB : STD_LOGIC;
+  signal NLW_StateMachine_0_clkon_UNCONNECTED : STD_LOGIC;
+  signal NLW_StateMachine_0_state_fix_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_adc_i2c_controller_0_data_rd_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_btn_debounce_toggle_0_BTN_O_UNCONNECTED : STD_LOGIC;
   signal NLW_btn_debounce_toggle_0_PULSE_O_UNCONNECTED : STD_LOGIC;
   signal NLW_btn_debounce_toggle_0_TOGGLE_O_UNCONNECTED : STD_LOGIC;
-  signal NLW_processing_system7_0_FCLK_RESET0_N_UNCONNECTED : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of DDR_cas_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CAS_N";
   attribute X_INTERFACE_INFO of DDR_ck_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_N";
@@ -133,6 +163,27 @@ architecture STRUCTURE of top_level is
   attribute X_INTERFACE_INFO of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
 begin
   BTN0_1 <= BTN0;
+StateMachine_0: component top_level_StateMachine_0_0
+     port map (
+      clk => processing_system7_0_FCLK_CLK0,
+      clkon => NLW_StateMachine_0_clkon_UNCONNECTED,
+      cycle => '0',
+      reset => processing_system7_0_FCLK_RESET0_N,
+      state_fix(3 downto 0) => NLW_StateMachine_0_state_fix_UNCONNECTED(3 downto 0)
+    );
+adc_i2c_controller_0: component top_level_adc_i2c_controller_0_0
+     port map (
+      ADC_wr(7 downto 0) => B"00000000",
+      AIN_mode(1 downto 0) => B"00",
+      AIN_sel(1 downto 0) => B"00",
+      analog_o_en => '0',
+      clk => processing_system7_0_FCLK_CLK0,
+      data_rd(7 downto 0) => NLW_adc_i2c_controller_0_data_rd_UNCONNECTED(7 downto 0),
+      reset_n => processing_system7_0_FCLK_RESET0_N,
+      rw => '1',
+      scl => ADC_scl,
+      sda => ADC_sda
+    );
 btn_debounce_toggle_0: component top_level_btn_debounce_toggle_0_0
      port map (
       BTN_I => BTN0_1,
@@ -141,7 +192,7 @@ btn_debounce_toggle_0: component top_level_btn_debounce_toggle_0_0
       PULSE_O => NLW_btn_debounce_toggle_0_PULSE_O_UNCONNECTED,
       TOGGLE_O => NLW_btn_debounce_toggle_0_TOGGLE_O_UNCONNECTED
     );
-processing_system7_0: component top_level_processing_system7_0_2
+processing_system7_0: component top_level_processing_system7_0_3
      port map (
       DDR_Addr(14 downto 0) => DDR_addr(14 downto 0),
       DDR_BankAddr(2 downto 0) => DDR_ba(2 downto 0),
@@ -161,7 +212,7 @@ processing_system7_0: component top_level_processing_system7_0_2
       DDR_VRP => FIXED_IO_ddr_vrp,
       DDR_WEB => DDR_we_n,
       FCLK_CLK0 => processing_system7_0_FCLK_CLK0,
-      FCLK_RESET0_N => NLW_processing_system7_0_FCLK_RESET0_N_UNCONNECTED,
+      FCLK_RESET0_N => processing_system7_0_FCLK_RESET0_N,
       MIO(31 downto 0) => FIXED_IO_mio(31 downto 0),
       PS_CLK => FIXED_IO_ps_clk,
       PS_PORB => FIXED_IO_ps_porb,
