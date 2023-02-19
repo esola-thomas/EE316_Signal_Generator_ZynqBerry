@@ -4,18 +4,15 @@
 #set_property IOSTANDARD LVCMOS33 [get_ports {GPIO_1_tri_io[*]}]
 ## GPIO Pins
 ## GPIO2
-set_property PACKAGE_PIN K15 [get_ports {BTN0}]
-set_property IOSTANDARD LVCMOS33 [get_ports BTN0]
 ## GPIO3
-#set_property PACKAGE_PIN J14 [get_ports {GPIO_1_tri_io[1]}]
 ## GPIO4
-#set_property PACKAGE_PIN H12 [get_ports {GPIO_1_tri_io[2]}]
 ## GPIO5
-#set_property PACKAGE_PIN N14 [get_ports {GPIO_1_tri_io[3]}]
+#set_property PACKAGE_PIN N14 [get_ports {BTN[3]}]
+
 ## GPIO6
-#set_property PACKAGE_PIN R15 [get_ports {GPIO_1_tri_io[4]}]
+#set_property PACKAGE_PIN R15 [get_ports {ADC_sda}]
 ## GPIO7
-#set_property PACKAGE_PIN L14 [get_ports {GPIO_1_tri_io[5]}]
+#set_property PACKAGE_PIN L14 [get_ports {ADC_scl}]
 ## GPIO8
 #set_property PACKAGE_PIN L15 [get_ports {GPIO_1_tri_io[6]}]
 ## GPIO9
@@ -31,7 +28,6 @@ set_property IOSTANDARD LVCMOS33 [get_ports BTN0]
 ## GPIO16
 #set_property PACKAGE_PIN L13 [get_ports {GPIO_1_tri_io[12]}]
 ## GPIO17
-#set_property PACKAGE_PIN G11 [get_ports {GPIO_1_tri_io[13]}]
 ## GPIO18
 #set_property PACKAGE_PIN H11 [get_ports {GPIO_1_tri_io[14]}]
 ## GPIO19
@@ -41,7 +37,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports BTN0]
 ## GPIO21
 #set_property PACKAGE_PIN P15 [get_ports {GPIO_1_tri_io[17]}]
 ## GPIO22
-#set_property PACKAGE_PIN H13 [get_ports {GPIO_1_tri_io[18]}]
+set_property PACKAGE_PIN H13 [get_ports ADC_scl]
+set_property IOSTANDARD LVCMOS33 [get_ports ADC_scl]
 ## GPIO23
 #set_property PACKAGE_PIN J11 [get_ports {GPIO_1_tri_io[19]}]
 ## GPIO24
@@ -51,8 +48,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports BTN0]
 ## GPIO26
 #set_property PACKAGE_PIN L12 [get_ports {GPIO_1_tri_io[22]}]
 ## GPIO27
-#set_property PACKAGE_PIN G12 [get_ports {GPIO_1_tri_io[23]}]
-
+set_property PACKAGE_PIN G12 [get_ports ADC_sda]
+set_property IOSTANDARD LVCMOS33 [get_ports ADC_sda]
 ## DSI_D0_N
 #set_property PACKAGE_PIN F13 [get_ports {GPIO_1_tri_io[24]}]
 ## DSI_D0_P
@@ -87,4 +84,14 @@ set_property IOSTANDARD LVCMOS33 [get_ports BTN0]
 #set_property PACKAGE_PIN N8 [get_ports PWM_R]
 ## PWM_L
 #set_property PACKAGE_PIN N7 [get_ports PWM_L]
-set_property IOSTANDARD LVCMOS33 [get_ports PWM_*]
+#set_property IOSTANDARD LVCMOS33 [get_ports PWM_*]
+
+
+set_property IOSTANDARD LVCMOS33 [get_ports {btn[3]}]
+set_property PACKAGE_PIN G11 [get_ports {btn[3]}]
+set_property IOSTANDARD PCI33_3 [get_ports {btn[2]}]
+set_property IOSTANDARD PCI33_3 [get_ports {btn[1]}]
+set_property IOSTANDARD PCI33_3 [get_ports {btn[0]}]
+set_property PACKAGE_PIN H12 [get_ports {btn[2]}]
+set_property PACKAGE_PIN J14 [get_ports {btn[1]}]
+set_property PACKAGE_PIN K15 [get_ports {btn[0]}]

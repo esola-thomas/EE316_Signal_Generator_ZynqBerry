@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "top_level_adc_i2c_controller_0_0_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 3
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 set_param ips.modRefOverrideMrefDirPath /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/mref

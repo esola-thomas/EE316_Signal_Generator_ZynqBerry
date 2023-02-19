@@ -55,3 +55,248 @@ reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 12
 wait_on_run impl_1
 close_project
+open_project /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd}
+export_ip_user_files -of_objects  [get_files /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/ADC_user_logic.vhd] -no_script -reset -force -quiet
+remove_files  /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/ADC_user_logic.vhd
+file delete -force /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/ADC_user_logic.vhd
+update_module_reference top_level_adc_i2c_controller_0_0
+update_module_reference top_level_adc_i2c_controller_0_0
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout -routing
+regenerate_bd_layout
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+startgroup
+make_bd_pins_external  [get_bd_cells adc_i2c_controller_0]
+make_bd_intf_pins_external  [get_bd_cells adc_i2c_controller_0]
+endgroup
+undo
+validate_bd_design
+set_property location {1 167 326} [get_bd_cells btn_debounce_toggle_0]
+set_property location {1 158 271} [get_bd_cells btn_debounce_toggle_0]
+export_ip_user_files -of_objects  [get_files /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/btn_debouncer.vhd] -no_script -reset -force -quiet
+remove_files  /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/btn_debouncer.vhd
+file delete -force /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/btn_debouncer.vhd
+create_bd_cell -type module -reference btn_debounce_toggle btn_debounce_toggle_1
+create_bd_cell -type module -reference btn_debounce_toggle btn_debounce_toggle_2
+set_property location {2 408 495} [get_bd_cells btn_debounce_toggle_2]
+create_bd_cell -type module -reference btn_debounce_toggle btn_debounce_toggle_3
+set_property location {2 395 621} [get_bd_cells btn_debounce_toggle_3]
+connect_bd_net [get_bd_pins btn_debounce_toggle_1/CLK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins btn_debounce_toggle_2/CLK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins btn_debounce_toggle_3/CLK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+delete_bd_objs [get_bd_nets BTN0_1] [get_bd_ports BTN0]
+reset_run top_level_adc_i2c_controller_0_0_synth_1
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+delete_bd_objs [get_bd_nets Net] [get_bd_nets Net1] [get_bd_cells adc_i2c_controller_0]
+delete_bd_objs [get_bd_ports ADC_sda]
+delete_bd_objs [get_bd_ports ADC_scl]
+regenerate_bd_layout -routing
+regenerate_bd_layout
+update_compile_order -fileset sources_1
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+startgroup
+create_bd_port -dir I BTN0
+connect_bd_net [get_bd_pins /btn_debounce_toggle_1/BTN_I] [get_bd_ports BTN0]
+endgroup
+delete_bd_objs [get_bd_nets BTN0_1] [get_bd_ports BTN0]
+create_bd_port -dir I -from 0 -to 0 BTN
+connect_bd_net [get_bd_ports BTN] [get_bd_pins btn_debounce_toggle_1/BTN_I]
+delete_bd_objs [get_bd_nets BTN_1] [get_bd_ports BTN]
+startgroup
+create_bd_port -dir I BTN0
+connect_bd_net [get_bd_pins /btn_debounce_toggle_1/BTN_I] [get_bd_ports BTN0]
+endgroup
+startgroup
+create_bd_port -dir I BTN1
+connect_bd_net [get_bd_pins /btn_debounce_toggle_2/BTN_I] [get_bd_ports BTN1]
+endgroup
+startgroup
+create_bd_port -dir I BTN2
+connect_bd_net [get_bd_pins /btn_debounce_toggle_0/BTN_I] [get_bd_ports BTN2]
+endgroup
+startgroup
+create_bd_port -dir I BTN3
+connect_bd_net [get_bd_pins /StateMachine_0/cycle] [get_bd_ports BTN3]
+endgroup
+delete_bd_objs [get_bd_cells btn_debounce_toggle_3]
+delete_bd_objs [get_bd_nets BTN1_1]
+delete_bd_objs [get_bd_nets BTN2_1]
+delete_bd_objs [get_bd_nets BTN3_1]
+delete_bd_objs [get_bd_nets BTN0_1]
+create_bd_cell -type module -reference btn_debounce_toggle btn_debounce_toggle_3
+set_property location {2 445 728} [get_bd_cells btn_debounce_toggle_3]
+connect_bd_net [get_bd_ports BTN3] [get_bd_pins btn_debounce_toggle_3/BTN_I]
+connect_bd_net [get_bd_ports BTN2] [get_bd_pins btn_debounce_toggle_2/BTN_I]
+connect_bd_net [get_bd_ports BTN1] [get_bd_pins btn_debounce_toggle_1/BTN_I]
+set_property location {-54 148} [get_bd_ports BTN0]
+connect_bd_net [get_bd_ports BTN0] [get_bd_pins btn_debounce_toggle_0/BTN_I]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+connect_bd_net [get_bd_pins btn_debounce_toggle_3/CLK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+save_bd_design
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd]
+refresh_design
+report_utilization -name utilization_1
+close [ open /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/btn_debounce.vhd w ]
+add_files /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/btn_debounce.vhd
+update_compile_order -fileset sources_1
+open_bd_design {/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd}
+update_module_reference top_level_StateMachine_0_0
+update_module_reference top_level_btn_debounce_toggle_0_0
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+open_bd_design {/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd}
+delete_bd_objs [get_bd_nets BTN0_1] [get_bd_cells btn_debounce_toggle_0]
+delete_bd_objs [get_bd_nets BTN1_1] [get_bd_cells btn_debounce_toggle_1]
+delete_bd_objs [get_bd_nets BTN2_1] [get_bd_cells btn_debounce_toggle_2]
+delete_bd_objs [get_bd_nets BTN3_1] [get_bd_cells btn_debounce_toggle_3]
+delete_bd_objs [get_bd_ports BTN0]
+delete_bd_objs [get_bd_ports BTN1]
+delete_bd_objs [get_bd_ports BTN2]
+update_compile_order -fileset sources_1
+regenerate_bd_layout
+delete_bd_objs [get_bd_ports BTN3]
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK0] [get_bd_nets processing_system7_0_FCLK_RESET0_N] [get_bd_cells StateMachine_0]
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference StateMachine StateMachine_0
+set_property location {1.5 512 285} [get_bd_cells StateMachine_0]
+create_bd_cell -type module -reference btn_debounce btn_debounce_0
+connect_bd_net [get_bd_pins btn_debounce_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins StateMachine_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+delete_bd_objs [get_bd_cells StateMachine_0]
+create_bd_cell -type module -reference StateMachine StateMachine_0
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (50 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins StateMachine_0/clk]
+undo
+undo
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK0]
+startgroup
+create_bd_port -dir I -from 3 -to 0 btn
+connect_bd_net [get_bd_pins /btn_debounce_0/btn] [get_bd_ports btn]
+endgroup
+connect_bd_net [get_bd_pins btn_debounce_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+save_bd_design
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference StateMachine StateMachine_0
+set_property location {2 467 239} [get_bd_cells StateMachine_0]
+set_property location {2 511 242} [get_bd_cells StateMachine_0]
+connect_bd_net [get_bd_pins StateMachine_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+reset_run synth_1
+save_bd_design
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+update_module_reference top_level_StateMachine_0_3
+connect_bd_net [get_bd_pins btn_debounce_0/btn3_T] [get_bd_pins StateMachine_0/reset]
+save_bd_design
+reset_run impl_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+close [ open /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/ADC_dumy_driver.vhd w ]
+add_files /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/ADC_dumy_driver.vhd
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference adc_i2c_controller adc_i2c_controller_0
+create_bd_cell -type module -reference ADC_dumy_driver ADC_dumy_driver_0
+set_property location {2 459 718} [get_bd_cells ADC_dumy_driver_0]
+set_property location {3 785 734} [get_bd_cells adc_i2c_controller_0]
+connect_bd_net [get_bd_pins adc_i2c_controller_0/clk] [get_bd_pins ADC_dumy_driver_0/clk]
+connect_bd_net [get_bd_pins ADC_dumy_driver_0/data_rd] [get_bd_pins adc_i2c_controller_0/data_rd]
+connect_bd_net [get_bd_pins adc_i2c_controller_0/analog_o_en] [get_bd_pins ADC_dumy_driver_0/analog_o_en]
+connect_bd_net [get_bd_pins adc_i2c_controller_0/AIN_mode] [get_bd_pins ADC_dumy_driver_0/AIN_mode]
+connect_bd_net [get_bd_pins adc_i2c_controller_0/AIN_sel] [get_bd_pins ADC_dumy_driver_0/AIN_sel]
+update_module_reference top_level_adc_i2c_controller_0_0
+update_compile_order -fileset sources_1
+startgroup
+create_bd_port -dir IO ADC_sda
+connect_bd_net [get_bd_pins /adc_i2c_controller_0/sda] [get_bd_ports ADC_sda]
+endgroup
+startgroup
+create_bd_port -dir IO ADC_scl
+connect_bd_net [get_bd_pins /adc_i2c_controller_0/scl] [get_bd_ports ADC_scl]
+endgroup
+connect_bd_net [get_bd_pins ADC_dumy_driver_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins adc_i2c_controller_0/reset_n] [get_bd_pins btn_debounce_0/btn3_T]
+save_bd_design
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout
+regenerate_bd_layout -routing
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+validate_bd_design -force
+delete_bd_objs [get_bd_cells StateMachine_0]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+save_bd_design
+reset_run synth_1
+reset_run top_level_adc_i2c_controller_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+update_module_reference top_level_adc_i2c_controller_0_0
+update_module_reference top_level_adc_i2c_controller_0_0
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+update_module_reference top_level_adc_i2c_controller_0_0
+regenerate_bd_layout
+validate_bd_design
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+update_module_reference top_level_adc_i2c_controller_0_0
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+close_design
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd]
+refresh_design
+open_bd_design {/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd}
+set_property iostandard LVCMOS33 [get_ports [list {btn[3]}]]
+set_property PACKAGE_PIN G11 [get_ports {btn[3]}]
+set_property IOSTANDARD PCI33_3 [get_ports [list {btn[2]}]]
+set_property IOSTANDARD PCI33_3 [get_ports [list {btn[1]}]]
+set_property IOSTANDARD PCI33_3 [get_ports [list {btn[0]}]]
+place_ports {btn[2]} H12
+place_ports {btn[1]} J14
+place_ports {btn[0]} K15
+set_property target_constrs_file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+close_design
+open_hw_manager
+connect_hw_server -allow_non_jtag
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag

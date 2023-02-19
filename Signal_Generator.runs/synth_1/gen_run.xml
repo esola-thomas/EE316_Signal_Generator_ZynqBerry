@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg225-1" LaunchTime="1676663610" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ADC_user_logic.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg225-1" LaunchTime="1676777229" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ADC_user_logic.dcp">
   <File Type="VDS-TIMINGSUMMARY" Name="top_level_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="top_level_wrapper.dcp"/>
   <File Type="RDS-UTIL-PB" Name="top_level_wrapper_utilization_synth.pb"/>
@@ -17,7 +17,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/StateMachine.vhd">
+    <File Path="$PSRCDIR/sources_1/new/btn_debounce.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -30,6 +30,12 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/adc_i2c_controller.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ADC_dumy_driver.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -48,14 +54,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/ADC_user_logic.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/btn_debouncer.vhd">
+    <File Path="$PSRCDIR/sources_1/new/StateMachine.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -77,6 +76,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/TE0726.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -99,7 +99,7 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="top_level_adc_i2c_controller_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_ADC_dumy_driver_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_btn_debounce_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_processing_system7_0_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_StateMachine_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_btn_debounce_toggle_0_0"/>
 </GenRun>

@@ -8,11 +8,11 @@
     "gen_directory": "../../../../../../Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_adc_i2c_controller_0_0",
     "parameters": {
       "component_parameters": {
-        "i2c_address": [ { "value": "\"01001000\"", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "i2c_address": [ { "value": "\"111\"", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "Component_Name": [ { "value": "top_level_adc_i2c_controller_0_0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
-        "i2c_address": [ { "value": "\"01001000\"", "resolve_type": "generated", "format": "bitString", "usage": "all" } ]
+        "i2c_address": [ { "value": "\"111\"", "resolve_type": "generated", "format": "bitString", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynq" } ],
@@ -47,8 +47,6 @@
         "analog_o_en": [ { "direction": "in" } ],
         "AIN_mode": [ { "direction": "in", "size_left": "1", "size_right": "0" } ],
         "AIN_sel": [ { "direction": "in", "size_left": "1", "size_right": "0" } ],
-        "rw": [ { "direction": "in", "driver_value": "0x1" } ],
-        "ADC_wr": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
         "data_rd": [ { "direction": "out", "size_left": "7", "size_right": "0" } ],
         "sda": [ { "direction": "inout" } ],
         "scl": [ { "direction": "inout" } ]

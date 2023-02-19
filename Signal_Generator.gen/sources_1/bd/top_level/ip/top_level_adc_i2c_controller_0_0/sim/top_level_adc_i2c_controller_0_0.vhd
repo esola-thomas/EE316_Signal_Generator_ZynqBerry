@@ -60,8 +60,6 @@ ENTITY top_level_adc_i2c_controller_0_0 IS
     analog_o_en : IN STD_LOGIC;
     AIN_mode : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     AIN_sel : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-    rw : IN STD_LOGIC;
-    ADC_wr : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     data_rd : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
     sda : INOUT STD_LOGIC;
     scl : INOUT STD_LOGIC
@@ -81,8 +79,6 @@ ARCHITECTURE top_level_adc_i2c_controller_0_0_arch OF top_level_adc_i2c_controll
       analog_o_en : IN STD_LOGIC;
       AIN_mode : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
       AIN_sel : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-      rw : IN STD_LOGIC;
-      ADC_wr : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
       data_rd : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
       sda : INOUT STD_LOGIC;
       scl : INOUT STD_LOGIC
@@ -97,7 +93,7 @@ ARCHITECTURE top_level_adc_i2c_controller_0_0_arch OF top_level_adc_i2c_controll
 BEGIN
   U0 : adc_i2c_controller
     GENERIC MAP (
-      i2c_address => B"01001000"
+      i2c_address => B"111"
     )
     PORT MAP (
       clk => clk,
@@ -105,8 +101,6 @@ BEGIN
       analog_o_en => analog_o_en,
       AIN_mode => AIN_mode,
       AIN_sel => AIN_sel,
-      rw => rw,
-      ADC_wr => ADC_wr,
       data_rd => data_rd,
       sda => sda,
       scl => scl

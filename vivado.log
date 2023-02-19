@@ -136,3 +136,925 @@ synth_1: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.r
 Run output will be captured here: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/impl_1/runme.log
 launch_runs: Time (s): cpu = 00:00:54 ; elapsed = 00:00:32 . Memory (MB): peak = 8884.793 ; gain = 230.266 ; free physical = 2256 ; free virtual = 7004
 close_project
+open_project /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.xpr
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.ip_user_files'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'top_level_adc_i2c_controller_0_0' generated file not found '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_adc_i2c_controller_0_0/top_level_adc_i2c_controller_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_adc_i2c_controller_0_0' generated file not found '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_adc_i2c_controller_0_0/top_level_adc_i2c_controller_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_adc_i2c_controller_0_0' generated file not found '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_adc_i2c_controller_0_0/top_level_adc_i2c_controller_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_adc_i2c_controller_0_0' generated file not found '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_adc_i2c_controller_0_0/top_level_adc_i2c_controller_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_adc_i2c_controller_0_0' generated file not found '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_adc_i2c_controller_0_0/top_level_adc_i2c_controller_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+update_compile_order -fileset sources_1
+open_bd_design {/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd}
+Reading block design file </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd>...
+Adding component instance block -- xilinx.com:module_ref:btn_debounce_toggle:1.0 - btn_debounce_toggle_0
+Adding component instance block -- xilinx.com:module_ref:StateMachine:1.0 - StateMachine_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:module_ref:adc_i2c_controller:1.0 - adc_i2c_controller_0
+Successfully read diagram <top_level> from block design file </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd>
+export_ip_user_files -of_objects  [get_files /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/ADC_user_logic.vhd] -no_script -reset -force -quiet
+remove_files  /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/ADC_user_logic.vhd
+file delete -force /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/ADC_user_logic.vhd
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'end' [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/adc_i2c_controller.vhd:125]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'end' [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/adc_i2c_controller.vhd:125]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'end' [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/adc_i2c_controller.vhd:125]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'end' [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/adc_i2c_controller.vhd:125]
+update_module_reference top_level_adc_i2c_controller_0_0
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'end' [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/adc_i2c_controller.vhd:125]
+ERROR: [IP_Flow 19-259] [HDL Parser] Failed analyze operation while parsing HDL.
+ERROR: [IP_Flow 19-258] [HDL Parser] Error parsing HDL file '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/adc_i2c_controller.vhd'.
+WARNING: [IP_Flow 19-378] There are no ports found from top-level file '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/adc_i2c_controller.vhd'.
+ERROR: [IP_Flow 19-4668] Failed to infer definition from module 'adc_i2c_controller'.
+ERROR: [Common 17-39] 'update_module_reference' failed due to earlier errors.
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'end' [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/adc_i2c_controller.vhd:125]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'end' [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/adc_i2c_controller.vhd:125]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'end' [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/adc_i2c_controller.vhd:125]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'end' [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/adc_i2c_controller.vhd:125]
+update_module_reference top_level_adc_i2c_controller_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd'
+INFO: [IP_Flow 19-3420] Updated top_level_adc_i2c_controller_0_0 to use current project options
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'rw'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'top_level_adc_i2c_controller_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'top_level_adc_i2c_controller_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+update_module_reference: Time (s): cpu = 00:00:26 ; elapsed = 00:00:07 . Memory (MB): peak = 8959.898 ; gain = 0.000 ; free physical = 3923 ; free virtual = 6959
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout -routing
+regenerate_bd_layout
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [BD 5-700] No address spaces matched 'get_bd_addr_spaces -of_objects /processing_system7_0 -filter {path == /processing_system7_0/Data}'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects {}'
+CRITICAL WARNING: [BD 41-1348] Reset pin /StateMachine_0/reset (associated clock /StateMachine_0/clk) is connected to asynchronous reset source /processing_system7_0/FCLK_RESET0_N.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/StateMachine_0/cycle
+/adc_i2c_controller_0/analog_o_en
+/adc_i2c_controller_0/AIN_mode
+/adc_i2c_controller_0/AIN_sel
+/adc_i2c_controller_0/ADC_wr
+
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.vhd
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/sim/top_level.vhd
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hdl/top_level_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_i2c_controller_0 .
+Exporting to file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hw_handoff/top_level.hwh
+Generated Hardware Definition File /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.hwdef
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_level_adc_i2c_controller_0_0
+[Sat Feb 18 17:10:20 2023] Launched top_level_adc_i2c_controller_0_0_synth_1, synth_1...
+Run output will be captured here:
+top_level_adc_i2c_controller_0_0_synth_1: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/top_level_adc_i2c_controller_0_0_synth_1/runme.log
+synth_1: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/synth_1/runme.log
+[Sat Feb 18 17:10:20 2023] Launched impl_1...
+Run output will be captured here: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:21 ; elapsed = 00:00:20 . Memory (MB): peak = 8959.898 ; gain = 0.000 ; free physical = 3879 ; free virtual = 6917
+startgroup
+make_bd_pins_external  [get_bd_cells adc_i2c_controller_0]
+make_bd_intf_pins_external  [get_bd_cells adc_i2c_controller_0]
+INFO: [BD 5-409] No interface pins to be made external for /adc_i2c_controller_0
+endgroup
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'make_bd_intf_pins_external  [get_bd_cells adc_i2c_controller_0]'
+INFO: [Common 17-17] undo 'make_bd_pins_external  [get_bd_cells adc_i2c_controller_0]'
+INFO: [Common 17-17] undo 'startgroup'
+validate_bd_design
+WARNING: [BD 5-700] No address spaces matched 'get_bd_addr_spaces -of_objects /processing_system7_0 -filter {path == /processing_system7_0/Data}'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects {}'
+CRITICAL WARNING: [BD 41-1348] Reset pin /StateMachine_0/reset (associated clock /StateMachine_0/clk) is connected to asynchronous reset source /processing_system7_0/FCLK_RESET0_N.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/StateMachine_0/cycle
+/adc_i2c_controller_0/analog_o_en
+/adc_i2c_controller_0/AIN_mode
+/adc_i2c_controller_0/AIN_sel
+/adc_i2c_controller_0/ADC_wr
+
+set_property location {1 167 326} [get_bd_cells btn_debounce_toggle_0]
+set_property location {1 158 271} [get_bd_cells btn_debounce_toggle_0]
+export_ip_user_files -of_objects  [get_files /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/btn_debouncer.vhd] -no_script -reset -force -quiet
+remove_files  /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/btn_debouncer.vhd
+file delete -force /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/btn_debouncer.vhd
+create_bd_cell -type module -reference btn_debounce_toggle btn_debounce_toggle_1
+create_bd_cell -type module -reference btn_debounce_toggle btn_debounce_toggle_2
+set_property location {2 408 495} [get_bd_cells btn_debounce_toggle_2]
+create_bd_cell -type module -reference btn_debounce_toggle btn_debounce_toggle_3
+set_property location {2 395 621} [get_bd_cells btn_debounce_toggle_3]
+connect_bd_net [get_bd_pins btn_debounce_toggle_1/CLK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins btn_debounce_toggle_2/CLK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins btn_debounce_toggle_3/CLK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+delete_bd_objs [get_bd_nets BTN0_1] [get_bd_ports BTN0]
+reset_run top_level_adc_i2c_controller_0_0_synth_1
+save_bd_design
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+WARNING: [BD 5-700] No address spaces matched 'get_bd_addr_spaces -of_objects /processing_system7_0 -filter {path == /processing_system7_0/Data}'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects {}'
+CRITICAL WARNING: [BD 41-1348] Reset pin /StateMachine_0/reset (associated clock /StateMachine_0/clk) is connected to asynchronous reset source /processing_system7_0/FCLK_RESET0_N.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/btn_debounce_toggle_0/BTN_I
+/StateMachine_0/cycle
+/adc_i2c_controller_0/analog_o_en
+/adc_i2c_controller_0/AIN_mode
+/adc_i2c_controller_0/AIN_sel
+/adc_i2c_controller_0/ADC_wr
+/btn_debounce_toggle_1/BTN_I
+/btn_debounce_toggle_2/BTN_I
+/btn_debounce_toggle_3/BTN_I
+
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.vhd
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/sim/top_level.vhd
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hdl/top_level_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block btn_debounce_toggle_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block btn_debounce_toggle_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block btn_debounce_toggle_3 .
+Exporting to file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hw_handoff/top_level.hwh
+Generated Hardware Definition File /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_level_adc_i2c_controller_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_level_btn_debounce_toggle_1_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_level_btn_debounce_toggle_2_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_level_btn_debounce_toggle_3_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_level_adc_i2c_controller_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_level_btn_debounce_toggle_1_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_level_btn_debounce_toggle_2_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_level_btn_debounce_toggle_3_0
+[Sat Feb 18 17:28:11 2023] Launched top_level_adc_i2c_controller_0_0_synth_1, top_level_btn_debounce_toggle_2_0_synth_1, top_level_btn_debounce_toggle_1_0_synth_1, top_level_btn_debounce_toggle_3_0_synth_1...
+Run output will be captured here:
+top_level_adc_i2c_controller_0_0_synth_1: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/top_level_adc_i2c_controller_0_0_synth_1/runme.log
+top_level_btn_debounce_toggle_2_0_synth_1: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/top_level_btn_debounce_toggle_2_0_synth_1/runme.log
+top_level_btn_debounce_toggle_1_0_synth_1: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/top_level_btn_debounce_toggle_1_0_synth_1/runme.log
+top_level_btn_debounce_toggle_3_0_synth_1: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/top_level_btn_debounce_toggle_3_0_synth_1/runme.log
+[Sat Feb 18 17:28:11 2023] Launched synth_1...
+Run output will be captured here: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:01:07 ; elapsed = 00:00:24 . Memory (MB): peak = 9075.578 ; gain = 0.000 ; free physical = 3694 ; free virtual = 6859
+delete_bd_objs [get_bd_nets Net] [get_bd_nets Net1] [get_bd_cells adc_i2c_controller_0]
+delete_bd_objs [get_bd_ports ADC_sda]
+delete_bd_objs [get_bd_ports ADC_scl]
+regenerate_bd_layout -routing
+regenerate_bd_layout
+update_compile_order -fileset sources_1
+save_bd_design
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+WARNING: [BD 5-700] No address spaces matched 'get_bd_addr_spaces -of_objects /processing_system7_0 -filter {path == /processing_system7_0/Data}'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects {}'
+CRITICAL WARNING: [BD 41-1348] Reset pin /StateMachine_0/reset (associated clock /StateMachine_0/clk) is connected to asynchronous reset source /processing_system7_0/FCLK_RESET0_N.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/btn_debounce_toggle_0/BTN_I
+/StateMachine_0/cycle
+/btn_debounce_toggle_1/BTN_I
+/btn_debounce_toggle_2/BTN_I
+/btn_debounce_toggle_3/BTN_I
+
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.vhd
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/sim/top_level.vhd
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hdl/top_level_wrapper.vhd
+Exporting to file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hw_handoff/top_level.hwh
+Generated Hardware Definition File /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.hwdef
+[Sat Feb 18 17:31:44 2023] Launched synth_1...
+Run output will be captured here: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:34 ; elapsed = 00:00:13 . Memory (MB): peak = 9170.625 ; gain = 0.000 ; free physical = 5554 ; free virtual = 6913
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z010clg225-1
+INFO: [Device 21-403] Loading part xc7z010clg225-1
+INFO: [Project 1-454] Reading design checkpoint '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_StateMachine_0_0/top_level_StateMachine_0_0.dcp' for cell 'top_level_i/StateMachine_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_btn_debounce_toggle_0_0/top_level_btn_debounce_toggle_0_0.dcp' for cell 'top_level_i/btn_debounce_toggle_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_btn_debounce_toggle_1_0/top_level_btn_debounce_toggle_1_0.dcp' for cell 'top_level_i/btn_debounce_toggle_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_btn_debounce_toggle_2_0/top_level_btn_debounce_toggle_2_0.dcp' for cell 'top_level_i/btn_debounce_toggle_2'
+INFO: [Project 1-454] Reading design checkpoint '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_btn_debounce_toggle_3_0/top_level_btn_debounce_toggle_3_0.dcp' for cell 'top_level_i/btn_debounce_toggle_3'
+INFO: [Project 1-454] Reading design checkpoint '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_processing_system7_0_3/top_level_processing_system7_0_3.dcp' for cell 'top_level_i/processing_system7_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 9184.629 ; gain = 0.000 ; free physical = 4984 ; free virtual = 6767
+INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_processing_system7_0_3/top_level_processing_system7_0_3.xdc] for cell 'top_level_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_processing_system7_0_3/top_level_processing_system7_0_3.xdc] for cell 'top_level_i/processing_system7_0/inst'
+Parsing XDC File [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc]
+WARNING: [Vivado 12-584] No ports matched 'BTN[0]'. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTN[1]'. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTN[2]'. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTN[3]'. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTN[*]'. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ADC_sda'. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ADC_sda'. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ADC_scl'. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ADC_scl'. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PWM_*'. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9204.785 ; gain = 0.000 ; free physical = 4852 ; free virtual = 6651
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 9385.141 ; gain = 200.512 ; free physical = 4752 ; free virtual = 6590
+startgroup
+create_bd_port -dir I BTN0
+connect_bd_net [get_bd_pins /btn_debounce_toggle_1/BTN_I] [get_bd_ports BTN0]
+endgroup
+delete_bd_objs [get_bd_nets BTN0_1] [get_bd_ports BTN0]
+create_bd_port -dir I -from 0 -to 0 BTN
+connect_bd_net [get_bd_ports BTN] [get_bd_pins btn_debounce_toggle_1/BTN_I]
+delete_bd_objs [get_bd_nets BTN_1] [get_bd_ports BTN]
+startgroup
+create_bd_port -dir I BTN0
+connect_bd_net [get_bd_pins /btn_debounce_toggle_1/BTN_I] [get_bd_ports BTN0]
+endgroup
+startgroup
+create_bd_port -dir I BTN1
+connect_bd_net [get_bd_pins /btn_debounce_toggle_2/BTN_I] [get_bd_ports BTN1]
+endgroup
+startgroup
+create_bd_port -dir I BTN2
+connect_bd_net [get_bd_pins /btn_debounce_toggle_0/BTN_I] [get_bd_ports BTN2]
+endgroup
+startgroup
+create_bd_port -dir I BTN3
+connect_bd_net [get_bd_pins /StateMachine_0/cycle] [get_bd_ports BTN3]
+endgroup
+delete_bd_objs [get_bd_cells btn_debounce_toggle_3]
+delete_bd_objs [get_bd_nets BTN1_1]
+delete_bd_objs [get_bd_nets BTN2_1]
+delete_bd_objs [get_bd_nets BTN3_1]
+delete_bd_objs [get_bd_nets BTN0_1]
+create_bd_cell -type module -reference btn_debounce_toggle btn_debounce_toggle_3
+set_property location {2 445 728} [get_bd_cells btn_debounce_toggle_3]
+connect_bd_net [get_bd_ports BTN3] [get_bd_pins btn_debounce_toggle_3/BTN_I]
+connect_bd_net [get_bd_ports BTN2] [get_bd_pins btn_debounce_toggle_2/BTN_I]
+connect_bd_net [get_bd_ports BTN1] [get_bd_pins btn_debounce_toggle_1/BTN_I]
+set_property location {-54 148} [get_bd_ports BTN0]
+connect_bd_net [get_bd_ports BTN0] [get_bd_pins btn_debounce_toggle_0/BTN_I]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+save_bd_design
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/utils_1/imports/synth_1/ADC_user_logic.dcp with file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/synth_1/top_level_wrapper.dcp
+launch_runs synth_1 -jobs 12
+ERROR: [BD 41-758] The following clock pins are not connected to a valid clock source: 
+/btn_debounce_toggle_3/CLK
+
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd 
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_level_btn_debounce_toggle_3_1
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+connect_bd_net [get_bd_pins btn_debounce_toggle_3/CLK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+save_bd_design
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+launch_runs synth_1 -jobs 12
+WARNING: [BD 5-700] No address spaces matched 'get_bd_addr_spaces -of_objects /processing_system7_0 -filter {path == /processing_system7_0/Data}'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects {}'
+CRITICAL WARNING: [BD 41-1348] Reset pin /StateMachine_0/reset (associated clock /StateMachine_0/clk) is connected to asynchronous reset source /processing_system7_0/FCLK_RESET0_N.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK0.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/StateMachine_0/cycle
+
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.vhd
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/sim/top_level.vhd
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hdl/top_level_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block btn_debounce_toggle_3 .
+Exporting to file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hw_handoff/top_level.hwh
+Generated Hardware Definition File /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.hwdef
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_level_btn_debounce_toggle_3_1
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 20537c730d67ba6c to dir: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_btn_debounce_toggle_3_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.cache/ip/2022.2/2/0/20537c730d67ba6c/top_level_btn_debounce_toggle_2_0_stub.vhdl to /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_btn_debounce_toggle_3_1/top_level_btn_debounce_toggle_3_1_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_btn_debounce_toggle_3_1/top_level_btn_debounce_toggle_3_1_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.cache/ip/2022.2/2/0/20537c730d67ba6c/top_level_btn_debounce_toggle_2_0.dcp to /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_btn_debounce_toggle_3_1/top_level_btn_debounce_toggle_3_1.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_btn_debounce_toggle_3_1/top_level_btn_debounce_toggle_3_1.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.cache/ip/2022.2/2/0/20537c730d67ba6c/top_level_btn_debounce_toggle_2_0_sim_netlist.v to /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_btn_debounce_toggle_3_1/top_level_btn_debounce_toggle_3_1_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_btn_debounce_toggle_3_1/top_level_btn_debounce_toggle_3_1_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.cache/ip/2022.2/2/0/20537c730d67ba6c/top_level_btn_debounce_toggle_2_0_sim_netlist.vhdl to /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_btn_debounce_toggle_3_1/top_level_btn_debounce_toggle_3_1_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_btn_debounce_toggle_3_1/top_level_btn_debounce_toggle_3_1_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.cache/ip/2022.2/2/0/20537c730d67ba6c/top_level_btn_debounce_toggle_2_0_stub.v to /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_btn_debounce_toggle_3_1/top_level_btn_debounce_toggle_3_1_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_btn_debounce_toggle_3_1/top_level_btn_debounce_toggle_3_1_stub.v
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP top_level_btn_debounce_toggle_3_1, cache-ID = 20537c730d67ba6c; cache size = 0.114 MB.
+[Sat Feb 18 18:19:58 2023] Launched synth_1...
+Run output will be captured here: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:25 ; elapsed = 00:00:09 . Memory (MB): peak = 10012.035 ; gain = 92.016 ; free physical = 4208 ; free virtual = 6121
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd]
+refresh_design
+INFO: [Project 1-454] Reading design checkpoint '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_StateMachine_0_0/top_level_StateMachine_0_0.dcp' for cell 'top_level_i/StateMachine_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_btn_debounce_toggle_0_0/top_level_btn_debounce_toggle_0_0.dcp' for cell 'top_level_i/btn_debounce_toggle_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_btn_debounce_toggle_1_0/top_level_btn_debounce_toggle_1_0.dcp' for cell 'top_level_i/btn_debounce_toggle_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_btn_debounce_toggle_2_0/top_level_btn_debounce_toggle_2_0.dcp' for cell 'top_level_i/btn_debounce_toggle_2'
+INFO: [Project 1-454] Reading design checkpoint '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_btn_debounce_toggle_3_1/top_level_btn_debounce_toggle_3_1.dcp' for cell 'top_level_i/btn_debounce_toggle_3'
+INFO: [Project 1-454] Reading design checkpoint '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_processing_system7_0_3/top_level_processing_system7_0_3.dcp' for cell 'top_level_i/processing_system7_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 10012.035 ; gain = 0.000 ; free physical = 4187 ; free virtual = 6102
+INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_processing_system7_0_3/top_level_processing_system7_0_3.xdc] for cell 'top_level_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_processing_system7_0_3/top_level_processing_system7_0_3.xdc] for cell 'top_level_i/processing_system7_0/inst'
+Parsing XDC File [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc]
+WARNING: [Vivado 12-584] No ports matched 'BTN[0]'. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTN[1]'. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTN[2]'. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTN[3]'. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTN[*]'. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ADC_sda'. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ADC_sda'. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ADC_scl'. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ADC_scl'. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PWM_*'. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+report_utilization -name utilization_1
+close [ open /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/btn_debounce.vhd w ]
+add_files /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/btn_debounce.vhd
+update_compile_order -fileset sources_1
+open_bd_design {/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd}
+update_module_reference top_level_StateMachine_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd'
+INFO: [IP_Flow 19-3420] Updated top_level_StateMachine_0_0 to use current project options
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'btn0'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'btn1'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'btn2'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'btn3'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'top_level_StateMachine_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'top_level_StateMachine_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+update_module_reference top_level_btn_debounce_toggle_0_0
+ERROR: [filemgmt 56-190] Failed to uniquely resolve reference. Multiple different modules were found that match the name 'btn_debounce_toggle'.
+update_module_reference: Time (s): cpu = 00:00:25 ; elapsed = 00:00:06 . Memory (MB): peak = 10144.082 ; gain = 0.000 ; free physical = 3992 ; free virtual = 5993
+ERROR: [Common 17-39] 'update_module_reference' failed due to earlier errors.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+open_bd_design {/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd}
+delete_bd_objs [get_bd_nets BTN0_1] [get_bd_cells btn_debounce_toggle_0]
+delete_bd_objs [get_bd_nets BTN1_1] [get_bd_cells btn_debounce_toggle_1]
+delete_bd_objs [get_bd_nets BTN2_1] [get_bd_cells btn_debounce_toggle_2]
+delete_bd_objs [get_bd_nets BTN3_1] [get_bd_cells btn_debounce_toggle_3]
+delete_bd_objs [get_bd_ports BTN0]
+delete_bd_objs [get_bd_ports BTN1]
+delete_bd_objs [get_bd_ports BTN2]
+update_compile_order -fileset sources_1
+regenerate_bd_layout
+delete_bd_objs [get_bd_ports BTN3]
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK0] [get_bd_nets processing_system7_0_FCLK_RESET0_N] [get_bd_cells StateMachine_0]
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference StateMachine StateMachine_0
+set_property location {1.5 512 285} [get_bd_cells StateMachine_0]
+create_bd_cell -type module -reference btn_debounce btn_debounce_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+connect_bd_net [get_bd_pins btn_debounce_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins StateMachine_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+delete_bd_objs [get_bd_cells StateMachine_0]
+create_bd_cell -type module -reference StateMachine StateMachine_0
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (50 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins StateMachine_0/clk]
+undo
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (50 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins StateMachine_0/clk]'
+undo
+INFO: [Common 17-17] undo 'create_bd_cell -type module -reference StateMachine StateMachine_0'
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK0]
+startgroup
+create_bd_port -dir I -from 3 -to 0 btn
+connect_bd_net [get_bd_pins /btn_debounce_0/btn] [get_bd_ports btn]
+endgroup
+connect_bd_net [get_bd_pins btn_debounce_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+save_bd_design
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference StateMachine StateMachine_0
+set_property location {2 467 239} [get_bd_cells StateMachine_0]
+set_property location {2 511 242} [get_bd_cells StateMachine_0]
+connect_bd_net [get_bd_pins StateMachine_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/utils_1/imports/synth_1/ADC_user_logic.dcp with file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/synth_1/top_level_wrapper.dcp
+save_bd_design
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+launch_runs impl_1 -jobs 12
+WARNING: [BD 5-700] No address spaces matched 'get_bd_addr_spaces -of_objects /processing_system7_0 -filter {path == /processing_system7_0/Data}'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects {}'
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/StateMachine_0/reset
+/StateMachine_0/cycle
+/StateMachine_0/btn0
+/StateMachine_0/btn1
+/StateMachine_0/btn2
+/StateMachine_0/btn3
+
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.vhd
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/sim/top_level.vhd
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hdl/top_level_wrapper.vhd
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [BD 41-1029] Generation completed for the IP Integrator block btn_debounce_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StateMachine_0 .
+Exporting to file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hw_handoff/top_level.hwh
+Generated Hardware Definition File /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_level_StateMachine_0_3
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_level_btn_debounce_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_level_StateMachine_0_3
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_level_btn_debounce_0_0
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sat Feb 18 19:02:04 2023] Launched top_level_StateMachine_0_3_synth_1, top_level_btn_debounce_0_0_synth_1, synth_1...
+Run output will be captured here:
+top_level_StateMachine_0_3_synth_1: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/top_level_StateMachine_0_3_synth_1/runme.log
+top_level_btn_debounce_0_0_synth_1: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/top_level_btn_debounce_0_0_synth_1/runme.log
+synth_1: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/synth_1/runme.log
+[Sat Feb 18 19:02:04 2023] Launched impl_1...
+Run output will be captured here: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 10450.246 ; gain = 54.023 ; free physical = 3970 ; free virtual = 5989
+update_module_reference top_level_StateMachine_0_3
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd'
+INFO: [IP_Flow 19-3420] Updated top_level_StateMachine_0_3 to use current project options
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'btn0'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'btn1'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'btn2'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'btn3'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'top_level_StateMachine_0_3'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'top_level_StateMachine_0_3' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+connect_bd_net [get_bd_pins btn_debounce_0/btn3_T] [get_bd_pins StateMachine_0/reset]
+save_bd_design
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+reset_run impl_1
+launch_runs impl_1 -jobs 12
+WARNING: [BD 5-700] No address spaces matched 'get_bd_addr_spaces -of_objects /processing_system7_0 -filter {path == /processing_system7_0/Data}'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects {}'
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/StateMachine_0/cycle
+
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.vhd
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/sim/top_level.vhd
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hdl/top_level_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StateMachine_0 .
+Exporting to file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hw_handoff/top_level.hwh
+Generated Hardware Definition File /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.hwdef
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_level_StateMachine_0_3
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry d70695522f52d55c to dir: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_StateMachine_0_3
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.cache/ip/2022.2/d/7/d70695522f52d55c/top_level_StateMachine_0_0_stub.vhdl to /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_StateMachine_0_3/top_level_StateMachine_0_3_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_StateMachine_0_3/top_level_StateMachine_0_3_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.cache/ip/2022.2/d/7/d70695522f52d55c/top_level_StateMachine_0_0.dcp to /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_StateMachine_0_3/top_level_StateMachine_0_3.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_StateMachine_0_3/top_level_StateMachine_0_3.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.cache/ip/2022.2/d/7/d70695522f52d55c/top_level_StateMachine_0_0_sim_netlist.v to /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_StateMachine_0_3/top_level_StateMachine_0_3_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_StateMachine_0_3/top_level_StateMachine_0_3_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.cache/ip/2022.2/d/7/d70695522f52d55c/top_level_StateMachine_0_0_sim_netlist.vhdl to /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_StateMachine_0_3/top_level_StateMachine_0_3_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_StateMachine_0_3/top_level_StateMachine_0_3_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.cache/ip/2022.2/d/7/d70695522f52d55c/top_level_StateMachine_0_0_stub.v to /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_StateMachine_0_3/top_level_StateMachine_0_3_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_StateMachine_0_3/top_level_StateMachine_0_3_stub.v
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP top_level_StateMachine_0_3, cache-ID = d70695522f52d55c; cache size = 0.244 MB.
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sat Feb 18 19:04:51 2023] Launched synth_1...
+Run output will be captured here: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/synth_1/runme.log
+[Sat Feb 18 19:04:51 2023] Launched impl_1...
+Run output will be captured here: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:21 ; elapsed = 00:00:09 . Memory (MB): peak = 10580.727 ; gain = 55.016 ; free physical = 3801 ; free virtual = 5846
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+close [ open /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/ADC_dumy_driver.vhd w ]
+add_files /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/new/ADC_dumy_driver.vhd
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference adc_i2c_controller adc_i2c_controller_0
+create_bd_cell -type module -reference ADC_dumy_driver ADC_dumy_driver_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property location {2 459 718} [get_bd_cells ADC_dumy_driver_0]
+set_property location {3 785 734} [get_bd_cells adc_i2c_controller_0]
+connect_bd_net [get_bd_pins adc_i2c_controller_0/clk] [get_bd_pins ADC_dumy_driver_0/clk]
+connect_bd_net [get_bd_pins ADC_dumy_driver_0/data_rd] [get_bd_pins adc_i2c_controller_0/data_rd]
+connect_bd_net [get_bd_pins adc_i2c_controller_0/analog_o_en] [get_bd_pins ADC_dumy_driver_0/analog_o_en]
+connect_bd_net [get_bd_pins adc_i2c_controller_0/AIN_mode] [get_bd_pins ADC_dumy_driver_0/AIN_mode]
+connect_bd_net [get_bd_pins adc_i2c_controller_0/AIN_sel] [get_bd_pins ADC_dumy_driver_0/AIN_sel]
+update_module_reference top_level_adc_i2c_controller_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd'
+INFO: [IP_Flow 19-3420] Updated top_level_adc_i2c_controller_0_0 to use current project options
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'ADC_wr'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'top_level_adc_i2c_controller_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'top_level_adc_i2c_controller_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+WARNING: [BD 41-597] NET <Net> has no source
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+update_compile_order -fileset sources_1
+startgroup
+create_bd_port -dir IO ADC_sda
+connect_bd_net [get_bd_pins /adc_i2c_controller_0/sda] [get_bd_ports ADC_sda]
+endgroup
+startgroup
+create_bd_port -dir IO ADC_scl
+connect_bd_net [get_bd_pins /adc_i2c_controller_0/scl] [get_bd_ports ADC_scl]
+endgroup
+connect_bd_net [get_bd_pins ADC_dumy_driver_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins adc_i2c_controller_0/reset_n] [get_bd_pins btn_debounce_0/btn3_T]
+save_bd_design
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout
+regenerate_bd_layout -routing
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/utils_1/imports/synth_1/ADC_user_logic.dcp with file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/synth_1/top_level_wrapper.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [BD 5-700] No address spaces matched 'get_bd_addr_spaces -of_objects /processing_system7_0 -filter {path == /processing_system7_0/Data}'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects {}'
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/StateMachine_0/cycle
+
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.vhd
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/sim/top_level.vhd
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hdl/top_level_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_i2c_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ADC_dumy_driver_0 .
+Exporting to file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hw_handoff/top_level.hwh
+Generated Hardware Definition File /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_level_ADC_dumy_driver_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_level_adc_i2c_controller_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_level_ADC_dumy_driver_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_level_adc_i2c_controller_0_0
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sat Feb 18 19:56:31 2023] Launched top_level_ADC_dumy_driver_0_0_synth_1, top_level_adc_i2c_controller_0_0_synth_1, synth_1...
+Run output will be captured here:
+top_level_ADC_dumy_driver_0_0_synth_1: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/top_level_ADC_dumy_driver_0_0_synth_1/runme.log
+top_level_adc_i2c_controller_0_0_synth_1: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/top_level_adc_i2c_controller_0_0_synth_1/runme.log
+synth_1: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/synth_1/runme.log
+[Sat Feb 18 19:56:31 2023] Launched impl_1...
+Run output will be captured here: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 10875.852 ; gain = 45.020 ; free physical = 2815 ; free virtual = 5265
+validate_bd_design -force
+WARNING: [BD 5-700] No address spaces matched 'get_bd_addr_spaces -of_objects /processing_system7_0 -filter {path == /processing_system7_0/Data}'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects {}'
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/StateMachine_0/cycle
+
+delete_bd_objs [get_bd_cells StateMachine_0]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+save_bd_design
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+reset_run synth_1
+reset_run top_level_adc_i2c_controller_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [BD 5-700] No address spaces matched 'get_bd_addr_spaces -of_objects /processing_system7_0 -filter {path == /processing_system7_0/Data}'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects {}'
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.vhd
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/sim/top_level.vhd
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hdl/top_level_wrapper.vhd
+Exporting to file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hw_handoff/top_level.hwh
+Generated Hardware Definition File /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.hwdef
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_level_adc_i2c_controller_0_0
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sat Feb 18 19:59:07 2023] Launched top_level_adc_i2c_controller_0_0_synth_1, synth_1...
+Run output will be captured here:
+top_level_adc_i2c_controller_0_0_synth_1: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/top_level_adc_i2c_controller_0_0_synth_1/runme.log
+synth_1: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/synth_1/runme.log
+[Sat Feb 18 19:59:07 2023] Launched impl_1...
+Run output will be captured here: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:42 ; elapsed = 00:00:22 . Memory (MB): peak = 10954.883 ; gain = 0.000 ; free physical = 3083 ; free virtual = 5358
+update_module_reference top_level_adc_i2c_controller_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd'
+INFO: [IP_Flow 19-3420] Updated top_level_adc_i2c_controller_0_0 to use current project options
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+update_module_reference top_level_adc_i2c_controller_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd'
+INFO: [IP_Flow 19-3420] Updated top_level_adc_i2c_controller_0_0 to use current project options
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+update_module_reference: Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 11022.906 ; gain = 0.000 ; free physical = 2860 ; free virtual = 5182
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [BD 5-700] No address spaces matched 'get_bd_addr_spaces -of_objects /processing_system7_0 -filter {path == /processing_system7_0/Data}'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects {}'
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.vhd
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/sim/top_level.vhd
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hdl/top_level_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_i2c_controller_0 .
+Exporting to file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hw_handoff/top_level.hwh
+Generated Hardware Definition File /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.hwdef
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_level_adc_i2c_controller_0_0
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sat Feb 18 21:30:38 2023] Launched top_level_adc_i2c_controller_0_0_synth_1, synth_1...
+Run output will be captured here:
+top_level_adc_i2c_controller_0_0_synth_1: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/top_level_adc_i2c_controller_0_0_synth_1/runme.log
+synth_1: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/synth_1/runme.log
+[Sat Feb 18 21:30:39 2023] Launched impl_1...
+Run output will be captured here: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:26 ; elapsed = 00:00:14 . Memory (MB): peak = 11044.922 ; gain = 22.016 ; free physical = 2902 ; free virtual = 5225
+update_module_reference top_level_adc_i2c_controller_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd'
+INFO: [IP_Flow 19-3420] Updated top_level_adc_i2c_controller_0_0 to use current project options
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+regenerate_bd_layout
+validate_bd_design
+WARNING: [BD 5-700] No address spaces matched 'get_bd_addr_spaces -of_objects /processing_system7_0 -filter {path == /processing_system7_0/Data}'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects {}'
+save_bd_design
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [BD 41-1662] The design 'top_level.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.vhd
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/sim/top_level.vhd
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hdl/top_level_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_i2c_controller_0 .
+Exporting to file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hw_handoff/top_level.hwh
+Generated Hardware Definition File /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.hwdef
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_level_adc_i2c_controller_0_0
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sat Feb 18 21:47:40 2023] Launched top_level_adc_i2c_controller_0_0_synth_1, synth_1...
+Run output will be captured here:
+top_level_adc_i2c_controller_0_0_synth_1: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/top_level_adc_i2c_controller_0_0_synth_1/runme.log
+synth_1: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/synth_1/runme.log
+[Sat Feb 18 21:47:40 2023] Launched impl_1...
+Run output will be captured here: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:39 ; elapsed = 00:00:21 . Memory (MB): peak = 11115.949 ; gain = 0.000 ; free physical = 3581 ; free virtual = 5921
+update_module_reference top_level_adc_i2c_controller_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading '/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd'
+INFO: [IP_Flow 19-3420] Updated top_level_adc_i2c_controller_0_0 to use current project options
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [BD 5-700] No address spaces matched 'get_bd_addr_spaces -of_objects /processing_system7_0 -filter {path == /processing_system7_0/Data}'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects {}'
+Wrote  : </home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd> 
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.vhd
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/sim/top_level.vhd
+VHDL Output written to : /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hdl/top_level_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_i2c_controller_0 .
+Exporting to file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/hw_handoff/top_level.hwh
+Generated Hardware Definition File /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/synth/top_level.hwdef
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_level_adc_i2c_controller_0_0
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sat Feb 18 22:04:38 2023] Launched top_level_adc_i2c_controller_0_0_synth_1, synth_1...
+Run output will be captured here:
+top_level_adc_i2c_controller_0_0_synth_1: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/top_level_adc_i2c_controller_0_0_synth_1/runme.log
+synth_1: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/synth_1/runme.log
+[Sat Feb 18 22:04:38 2023] Launched impl_1...
+Run output will be captured here: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:22 ; elapsed = 00:00:13 . Memory (MB): peak = 11182.984 ; gain = 0.000 ; free physical = 3561 ; free virtual = 5914
+close_design
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sat Feb 18 22:08:58 2023] Launched impl_1...
+Run output will be captured here: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/impl_1/runme.log
+reset_run impl_1
+launch_runs impl_1 -jobs 12
+[Sat Feb 18 22:09:51 2023] Launched impl_1...
+Run output will be captured here: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/impl_1/runme.log
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 11182.984 ; gain = 0.000 ; free physical = 1428 ; free virtual = 3824
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.38 . Memory (MB): peak = 11182.984 ; gain = 0.000 ; free physical = 1312 ; free virtual = 3710
+Restored from archive | CPU: 0.330000 secs | Memory: 0.496620 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.38 . Memory (MB): peak = 11182.984 ; gain = 0.000 ; free physical = 1312 ; free virtual = 3710
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11182.984 ; gain = 0.000 ; free physical = 1312 ; free virtual = 3710
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/utils_1/imports/synth_1/ADC_user_logic.dcp with file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/synth_1/top_level_wrapper.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sat Feb 18 22:16:54 2023] Launched synth_1...
+Run output will be captured here: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/synth_1/runme.log
+[Sat Feb 18 22:16:54 2023] Launched impl_1...
+Run output will be captured here: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/impl_1/runme.log
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd]
+refresh_design
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 11225.992 ; gain = 0.000 ; free physical = 3341 ; free virtual = 5746
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.3 ; elapsed = 00:00:00.15 . Memory (MB): peak = 11225.992 ; gain = 0.000 ; free physical = 3238 ; free virtual = 5643
+Restored from archive | CPU: 0.300000 secs | Memory: 1.276619 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.3 ; elapsed = 00:00:00.15 . Memory (MB): peak = 11225.992 ; gain = 0.000 ; free physical = 3238 ; free virtual = 5643
+open_bd_design {/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/sources_1/bd/top_level/top_level.bd}
+set_property iostandard LVCMOS33 [get_ports [list {btn[3]}]]
+set_property PACKAGE_PIN G11 [get_ports {btn[3]}]
+set_property IOSTANDARD PCI33_3 [get_ports [list {btn[2]}]]
+set_property IOSTANDARD PCI33_3 [get_ports [list {btn[1]}]]
+set_property IOSTANDARD PCI33_3 [get_ports [list {btn[0]}]]
+place_ports {btn[2]} H12
+place_ports {btn[1]} J14
+place_ports {btn[0]} K15
+set_property target_constrs_file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/constrs_1/new/TE0726.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.srcs/utils_1/imports/synth_1/ADC_user_logic.dcp with file /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/synth_1/top_level_wrapper.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sat Feb 18 22:27:09 2023] Launched synth_1...
+Run output will be captured here: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/synth_1/runme.log
+[Sat Feb 18 22:27:09 2023] Launched impl_1...
+Run output will be captured here: /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.runs/impl_1/runme.log
+close_design
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2022.2
+  **** Build date : Oct 14 2022 at 05:10:28
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2022.2.0
+  ****** Build date   : Oct 04 2022-19:25:37
+    **** Build number : 2022.2.1664925937
+      ** Copyright 2017-2023 Xilinx, Inc. All Rights Reserved.
+
+
+
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2022.2.0
+  ****** Build date   : Oct 04 2022-19:25:37
+    **** Build number : 2022.2.1664925937
+      ** Copyright 2017-2023 Xilinx, Inc. All Rights Reserved.
+
+
+
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2022.2.0
+  ****** Build date   : Oct 04 2022-19:25:37
+    **** Build number : 2022.2.1664925937
+      ** Copyright 2017-2023 Xilinx, Inc. All Rights Reserved.
+
+
+
