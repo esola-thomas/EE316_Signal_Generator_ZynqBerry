@@ -371,7 +371,7 @@
           </children>
         </children>
         <children xsi:type="advanced:Perspective" xmi:id="_jlU5UK_9Ee26Jroyxd6cgA" elementId="org.eclipse.egit.ui.GitRepositoryExploring" selectedElement="_jlU5Ua_9Ee26Jroyxd6cgA" label="Git" iconURI="platform:/plugin/org.eclipse.egit.ui/icons/obj16/gitrepository.gif">
-          <persistedState key="persp.hiddenItems" value="persp.hideToolbarSC:print,persp.hideToolbarSC:org.eclipse.ui.edit.undo,persp.hideToolbarSC:org.eclipse.ui.edit.redo,persp.hideToolbarSC:org.eclipse.ui.edit.text.toggleShowSelectedElementOnly,persp.hideToolbarSC:org.eclipse.debug.ui.commands.RunToLine,persp.hideToolbarSC:org.eclipse.jdt.ui.actions.OpenProjectWizard,"/>
+          <persistedState key="persp.hiddenItems" value="persp.hideToolbarSC:print,persp.hideToolbarSC:org.eclipse.ui.edit.undo,persp.hideToolbarSC:org.eclipse.ui.edit.redo,persp.hideToolbarSC:org.eclipse.ui.edit.text.toggleShowSelectedElementOnly,persp.hideToolbarSC:org.eclipse.debug.ui.commands.RunToLine,persp.hideToolbarSC:org.eclipse.jdt.ui.actions.OpenProjectWizard,persp.actionSet:org.eclipse.cdt.ui.buildConfigActionSet,"/>
           <tags>persp.actionSet:com.xilinx.ide.debug.ui.launchActionSet</tags>
           <tags>persp.actionSet:org.eclipse.ide.search.searchActionSet</tags>
           <tags>persp.actionSet:org.eclipse.ui.edit.text.actionSet.navigation</tags>
@@ -387,6 +387,15 @@
           <tags>persp.newWizSC:com.xilinx.sdx.npw.revisedLibraryWizard</tags>
           <tags>persp.newWizSC:com.xilinx.sdx.npw.revisedKernelWizard</tags>
           <tags>persp.newWizSC:com.xilinx.sdx.npw.revisedPlatformWizard</tags>
+          <tags>persp.actionSet:org.eclipse.ui.cheatsheets.actionSet</tags>
+          <tags>persp.actionSet:org.eclipse.rse.core.search.searchActionSet</tags>
+          <tags>persp.actionSet:org.eclipse.search.searchActionSet</tags>
+          <tags>persp.actionSet:org.eclipse.text.quicksearch.actionSet</tags>
+          <tags>persp.actionSet:org.eclipse.ui.edit.text.actionSet.annotationNavigation</tags>
+          <tags>persp.actionSet:org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo</tags>
+          <tags>persp.actionSet:org.eclipse.ui.externaltools.ExternalToolsSet</tags>
+          <tags>persp.actionSet:org.eclipse.ui.actionSet.keyBindings</tags>
+          <tags>persp.actionSet:org.eclipse.ui.actionSet.openFiles</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_jlU5Ua_9Ee26Jroyxd6cgA" selectedElement="_jlWHc6_9Ee26Jroyxd6cgA" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_jlVgYK_9Ee26Jroyxd6cgA" containerData="5000" selectedElement="_jlWHca_9Ee26Jroyxd6cgA">
               <children xsi:type="basic:PartStack" xmi:id="_jlVgYa_9Ee26Jroyxd6cgA" elementId="org.eclipse.egit.ui.RepositoriesViewMStack" toBeRendered="false" containerData="7000">
@@ -824,7 +833,6 @@
       <tags>View</tags>
       <tags>categoryTag:Git</tags>
       <tags>active</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_nzZcQK_9Ee26Jroyxd6cgA" elementId="org.eclipse.egit.ui.ReflogView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -3424,9 +3432,10 @@
   <addons xmi:id="_FdyYt6_qEe26Jroyxd6cgA" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_FdyYuK_qEe26Jroyxd6cgA" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_Fd8wsK_qEe26Jroyxd6cgA" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_YSJPIbIREe2cJPdMDpovxQ" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <addons xmi:id="_FfpZ0K_qEe26Jroyxd6cgA" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
+  <addons xmi:id="_YSWqgLIREe2cJPdMDpovxQ" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
   <categories xmi:id="_FeXAYK_qEe26Jroyxd6cgA" elementId="org.eclipse.team.ui.category.team" name="Team" description="Actions that apply when working with a Team"/>
   <categories xmi:id="_FeXAYa_qEe26Jroyxd6cgA" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>
   <categories xmi:id="_FeXAYq_qEe26Jroyxd6cgA" elementId="org.eclipse.ui.category.edit" name="Edit"/>
