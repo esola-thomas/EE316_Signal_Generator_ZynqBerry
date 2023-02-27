@@ -126,17 +126,17 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_ADC_dumy_driver_0_0/top_level_ADC_dumy_driver_0_0.xci">
-          <Proxy FileSetName="top_level_ADC_dumy_driver_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_btn_debounce_0_0/top_level_btn_debounce_0_0.xci">
-          <Proxy FileSetName="top_level_btn_debounce_0_0"/>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_adc_i2c_controller_0_0/top_level_adc_i2c_controller_0_0.xci">
+          <Proxy FileSetName="top_level_adc_i2c_controller_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_processing_system7_0_3/top_level_processing_system7_0_3.xci">
           <Proxy FileSetName="top_level_processing_system7_0_3"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_adc_i2c_controller_0_0/top_level_adc_i2c_controller_0_0.xci">
-          <Proxy FileSetName="top_level_adc_i2c_controller_0_0"/>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_btn_debounce_0_0/top_level_btn_debounce_0_0.xci">
+          <Proxy FileSetName="top_level_btn_debounce_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_ADC_dumy_driver_0_0/top_level_ADC_dumy_driver_0_0.xci">
+          <Proxy FileSetName="top_level_ADC_dumy_driver_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/top_level/hdl/top_level_wrapper.vhd">
@@ -261,23 +261,6 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="synth_1_copy_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z010clg225-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1/synth_1_copy_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1_copy_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022" CtrlBit="true">
-        <ReportConfig DisplayName="synthesis_report" Name="synth_1_copy_1_synth_synthesis_report_0" Spec="" RunStep="synth_design">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig DisplayName="Utilization - Synth Design" Name="synth_1_copy_1_synth_report_utilization_0" Spec="report_utilization" RunStep="synth_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-        </ReportConfig>
-      </ReportStrategy>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>

@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Fri Feb 17 14:54:29 2023
+-- Date        : Sun Feb 26 15:46:26 2023
 -- Host        : Alienware running 64-bit Ubuntu 22.04.2 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_processing_system7_0_3/top_level_processing_system7_0_3_sim_netlist.vhdl
