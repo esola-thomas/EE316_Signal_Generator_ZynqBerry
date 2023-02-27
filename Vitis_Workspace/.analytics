@@ -8,3 +8,19 @@ timestamp=[2023-02-26 20:37:11], mode=BUILD, duration=0:00:06.202, duration_ms=6
 timestamp=[2023-02-26 20:47:43], mode=WORKBENCH_START, duration=0:00:05.909, duration_ms=5909, data={}
 timestamp=[2023-02-26 20:47:44], mode=WORKBENCH_UI_INIT, duration=0:00:00.811, duration_ms=811, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,SDK,SDK_system,top_level_wrapper}
 timestamp=[2023-02-26 20:47:44], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.967, duration_ms=967, data={}
+timestamp=[2023-02-27 12:58:51], mode=WORKBENCH_START, duration=0:00:13.750, duration_ms=13750, data={}
+timestamp=[2023-02-27 12:58:53], mode=WORKBENCH_UI_INIT, duration=0:00:01.598, duration_ms=1598, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,SDK,SDK_system,top_level_wrapper}
+timestamp=[2023-02-27 12:58:53], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.036, duration_ms=36, data={}
+timestamp=[2023-02-27 12:59:21], mode=PLATFORM_GENERATION, duration=0:00:15.530, duration_ms=15530, data={name=top_level_wrapper}
+timestamp=[2023-02-27 12:59:26], mode=BUILD, duration=0:00:02.331, duration_ms=2331, data={name=SDK, configuration=Debug, clean_build=false}
+timestamp=[2023-02-27 13:00:32], mode=BUILD, duration=0:00:01.097, duration_ms=1097, data={name=SDK, configuration=Debug, clean_build=false}
+timestamp=[2023-02-27 13:06:22], mode=PLATFORM_GENERATION, duration=0:00:04.060, duration_ms=4060, data={name=top_level_wrapper}
+timestamp=[2023-02-27 13:06:33], mode=PLATFORM_GENERATION, duration=0:00:04.605, duration_ms=4605, data={name=top_level_wrapper}
+timestamp=[2023-02-27 13:07:11], mode=PLATFORM_GENERATION, duration=0:00:10.030, duration_ms=10030, data={name=top_level_wrapper}
+timestamp=[2023-02-27 13:07:14], mode=BUILD, duration=0:00:01.277, duration_ms=1277, data={name=SDK, configuration=Debug, clean_build=false}
+timestamp=[2023-02-27 13:07:27], mode=BUILD, duration=0:00:08.049, duration_ms=8049, data={name=SDK_system, configuration=Debug, clean_build=false}
+timestamp=[2023-02-27 13:16:27], mode=PLATFORM_GENERATION, duration=0:00:10.518, duration_ms=10518, data={name=top_level_wrapper}
+timestamp=[2023-02-27 13:30:11], mode=BUILD, duration=0:00:01.334, duration_ms=1334, data={name=SDK, configuration=Debug, clean_build=false}
+timestamp=[2023-02-27 13:30:19], mode=BUILD, duration=0:00:08.003, duration_ms=8003, data={name=SDK_system, configuration=Debug, clean_build=false}
+timestamp=[2023-02-27 13:48:08], mode=PLATFORM_GENERATION, duration=0:00:10.578, duration_ms=10578, data={name=top_level_wrapper}
+timestamp=[2023-02-27 13:48:11], mode=BUILD, duration=0:00:01.267, duration_ms=1267, data={name=SDK, configuration=Debug, clean_build=false}

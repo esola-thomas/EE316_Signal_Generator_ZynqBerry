@@ -203,7 +203,7 @@
       "processing_system7_0": {
         "vlnv": "xilinx.com:ip:processing_system7:5.5",
         "xci_name": "top_level_processing_system7_0_3",
-        "xci_path": "ip/top_level_processing_system7_0_3/top_level_processing_system7_0_3.xci",
+        "xci_path": "ip\\top_level_processing_system7_0_3\\top_level_processing_system7_0_3.xci",
         "inst_hier_path": "processing_system7_0",
         "parameters": {
           "PCW_ACT_APU_PERIPHERAL_FREQMHZ": {
@@ -346,7 +346,7 @@
       "btn_debounce_0": {
         "vlnv": "xilinx.com:module_ref:btn_debounce:1.0",
         "xci_name": "top_level_btn_debounce_0_0",
-        "xci_path": "ip/top_level_btn_debounce_0_0/top_level_btn_debounce_0_0.xci",
+        "xci_path": "ip\\top_level_btn_debounce_0_0\\top_level_btn_debounce_0_0.xci",
         "inst_hier_path": "btn_debounce_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -414,7 +414,7 @@
       "ADC_dumy_driver_0": {
         "vlnv": "xilinx.com:module_ref:ADC_dumy_driver:1.0",
         "xci_name": "top_level_ADC_dumy_driver_0_0",
-        "xci_path": "ip/top_level_ADC_dumy_driver_0_0/top_level_ADC_dumy_driver_0_0.xci",
+        "xci_path": "ip\\top_level_ADC_dumy_driver_0_0\\top_level_ADC_dumy_driver_0_0.xci",
         "inst_hier_path": "ADC_dumy_driver_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -459,7 +459,7 @@
       "adc_i2c_controller_0": {
         "vlnv": "xilinx.com:module_ref:adc_i2c_controller:1.0",
         "xci_name": "top_level_adc_i2c_controller_0_0",
-        "xci_path": "ip/top_level_adc_i2c_controller_0_0/top_level_adc_i2c_controller_0_0.xci",
+        "xci_path": "ip\\top_level_adc_i2c_controller_0_0\\top_level_adc_i2c_controller_0_0.xci",
         "inst_hier_path": "adc_i2c_controller_0",
         "reference_info": {
           "ref_type": "hdl",

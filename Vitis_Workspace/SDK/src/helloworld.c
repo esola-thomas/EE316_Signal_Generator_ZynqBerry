@@ -55,7 +55,7 @@ int main()
     init_platform();
 
     print("Hello World\n\r");
-    print("Project Initialized Succesfully");
+    print("Project Initialized Successfully\n\r");
     cleanup_platform();
     return 0;
 }
