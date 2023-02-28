@@ -1,8 +1,8 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Mon Feb 27 12:50:41 2023
---Host        : CB195-UL-43 running 64-bit major release  (build 9200)
+--Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+--Date        : Tue Feb 28 10:47:26 2023
+--Host        : Alienware running 64-bit Ubuntu 22.04.2 LTS
 --Command     : generate_target top_level.bd
 --Design      : top_level
 --Purpose     : IP block netlist
@@ -90,15 +90,6 @@ architecture STRUCTURE of top_level is
     btn3_P : out STD_LOGIC
   );
   end component top_level_btn_debounce_0_0;
-  component top_level_ADC_dumy_driver_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    data_rd : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    analog_o_en : out STD_LOGIC;
-    AIN_mode : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    AIN_sel : out STD_LOGIC_VECTOR ( 1 downto 0 )
-  );
-  end component top_level_ADC_dumy_driver_0_0;
   component top_level_adc_i2c_controller_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -111,6 +102,15 @@ architecture STRUCTURE of top_level is
     scl : inout STD_LOGIC
   );
   end component top_level_adc_i2c_controller_0_0;
+  component top_level_ADC_dumy_driver_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    data_rd : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    analog_o_en : out STD_LOGIC;
+    AIN_mode : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    AIN_sel : out STD_LOGIC_VECTOR ( 1 downto 0 )
+  );
+  end component top_level_ADC_dumy_driver_0_0;
   signal ADC_dumy_driver_0_AIN_mode : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal ADC_dumy_driver_0_AIN_sel : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal ADC_dumy_driver_0_analog_o_en : STD_LOGIC;

@@ -17,16 +17,8 @@ domain create -name {standalone_ps7_cortexa9_0} -display-name {standalone_ps7_co
 platform generate -domains 
 platform active {top_level_wrapper}
 platform generate -quick
-bsp reload
 platform generate
-platform generate
-platform active {top_level_wrapper}
-bsp reload
+platform config -updatehw {/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/top_level_wrapper.xsa}
 platform generate -domains 
-platform clean
-platform config -updatehw {C:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/top_level_wrapper.xsa}
-platform generate
-platform config -updatehw {C:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/top_level_wrapper.xsa}
-platform generate -domains 
-platform config -updatehw {C:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/top_level_wrapper.xsa}
+platform config -updatehw {/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/top_level_wrapper.xsa}
 platform generate -domains 

@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
--- Date        : Mon Feb 27 12:53:16 2023
--- Host        : CB195-UL-43 running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+-- Date        : Tue Feb 28 10:48:18 2023
+-- Host        : Alienware running 64-bit Ubuntu 22.04.2 LTS
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_ADC_dumy_driver_0_0/top_level_ADC_dumy_driver_0_0_stub.vhdl
+--               /home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_ADC_dumy_driver_0_0/top_level_ADC_dumy_driver_0_0_stub.vhdl
 -- Design      : top_level_ADC_dumy_driver_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z010clg225-1

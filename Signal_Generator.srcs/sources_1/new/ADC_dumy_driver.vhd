@@ -41,12 +41,25 @@ end ADC_dumy_driver;
 
 architecture Behavioral of ADC_dumy_driver is
     signal data_rd_reg : STD_LOGIC_VECTOR(7 downto 0);
+    signal counter : integer := 0;
 
 begin
+
+    process (clk) is begin 
+        if (rising_edge(clk)) then
+            if (counter = 20000) then 
+                counter <= 0;
+            else 
+                counter <= counter + 1;
+            end if;
+        end if;
+    end process;
 
     data_rd_reg     <= data_rd;
     analog_o_en     <= '0';
     AIN_mode        <= "00";
-    AIN_sel         <= "00";
+    AIN_sel         <= "00" when counter < 10000 else 
+                        "01" when counter > 10000 else
+                        "00";
 
 end Behavioral;
