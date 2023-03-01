@@ -67,8 +67,11 @@ END component;
 type state_type is(start, ready, data_valid, busy_high, repeat);
 signal state        : state_type := start;
 
-signal busy         : std_logic;
-signal ena          : std_logic;
+type bytes is (Address, Control, Data1, Data2);
+signal send_byte : bytes := Address;
+
+signal busy         : std_logic := '0';
+signal ena          : std_logic := '0';
 signal rw           : std_logic := '0';
 
 constant byteSel_Max : integer := 3;
@@ -79,8 +82,6 @@ signal ADC_data_Control     : std_logic_vector(7 downto 0); -- Control Bit
 signal ADC_data_Adress      : std_logic_vector(7 downto 0); -- Adress Bit (The fist one sent)
 signal ADC_data_rd          : std_logic_vector (7 downto 0); -- Data reg to store locally the data sent by the ADC
 
-signal ack_error : std_logic; 
-
 begin
 -- 7    (MSB) Always first bit is 0
 -- 6    Second bit is analog output enable 0 off 1 enable
@@ -90,90 +91,71 @@ begin
 --      AD Chanel number    "00" AIN0 / "01" AIN1 / "10" AIN2 / "11" AIN3
 
 ADC_data_Control    <= '0' & analog_o_en & AIN_mode & '0' & AIN_sel & rw; -- CONTROL BYTE
-ADC_data_Adress     <= "1001" & i2c_address (2 downto 0) & rw;
+ADC_data_Adress     <= X"48";
 
 i2c_inst : i2c_master port map (
     clk       => clk,                  
     reset_n   => reset_n,                   
     ena       => ena,                    
-    addr      => "0000" & i2c_address, 
+    addr      => "0000100", 
     rw        => rw,                 
     data_wr   => ADC_data_wr,
     busy      => busy,                  
-    data_rd   => ADC_data_rd,
-    ack_error => ack_error,                  
+    data_rd   => ADC_data_rd,                  
     sda       => sda,                  
     scl       => scl  
 );
 
-process (clk) is begin
-
-    if (clk'EVENT and clk = '1') then
-
-        case byteSel is
-            when 1 => -- Send adress byte
-                ADC_data_wr <= ADC_data_Adress;
-            when 2 => -- Send control byte
-                ADC_data_wr <= ADC_data_Control;
-            when others => 
-                ADC_data_rd <= ADC_data_rd; -- Fix this, its a dumy action
-        end case;
-    end if;
-end process;
-
-process(clk, reset_n)
-begin
-    if reset_n = '0' then
-        state <= start;
+process (clk, reset_n) begin
+    if (reset_n = '0') then
         ena <= '0';
-        byteSel <= 0;
-    elsif rising_edge(clk) then
-        case state is
-				--Start state
-            when start =>
+        send_byte <= Address;
+    elsif (rising_edge(clk)) then
+        case send_byte is 
+            when Address =>
+                ADC_data_wr <= ADC_data_Adress;
+                rw <= '0';
+                ena <= '1';
+                if (busy = '1') then 
+                    send_byte <= Address;
+                else 
+                    send_byte <= Control;
+                end if;
 
-                    if (byteSel < 3) then 
-                        rw <= '0';                  --command 0 allows it a write    
-                    else
-                        rw <= '1';                  --command 1 allows it a read after Address and control have been sent
-                    end if;
+            when Control =>
+                ADC_data_wr <= ADC_data_Control;
+                rw <= '0';
+                ena <= '1';
+                if (busy = '1') then 
+                    send_byte <= Control;
+                else 
+                    send_byte <= Data1;
+                end if;
 
-                    ena <= '1';                     --initiate the transaction
-                    state <= ready;
+            when Data1 =>
+                ADC_data_wr <= ADC_data_Adress;
+                rw <= '1';
+                ena <= '1';
+                data_rd <= ADC_data_rd;
+                if (busy = '1') then 
+                    send_byte <= Data1;
+                else 
+                    send_byte <= Address;
+                end if;
 
-				--Ready State
-            when ready => 
-                if busy = '0' then
-                    ena <= '1';
-                    state <= data_valid;
+            when Data2 => 
+                ADC_data_wr <= ADC_data_Adress;
+                rw <= '1';
+                ena <= '1';
+                data_rd <= ADC_data_rd;
+                if (busy = '1') then 
+                    send_byte <= Address;
+                else 
+                    send_byte <= Address;
                 end if;
-            when data_valid =>
-            if busy = '1' then
-                ena <= '0';
-                state <= busy_high;
-                end if;
-     
-				--Busy High State
-            when busy_high =>
-            
-                if busy = '0' then
-                    state <= repeat;
-                end if;
-            
-				--Repeat state
-            when repeat =>
-            
-                if byteSel < byteSel_Max then
-                    byteSel <= byteSel + 1;
-                else
-                    byteSel <= 1;
-                end if;
-                    state <= start;
-            when others => null;    
         end case;
     end if;
 end process;
 
-data_rd <= ADC_data_rd; 
 
 end Behavioral;
