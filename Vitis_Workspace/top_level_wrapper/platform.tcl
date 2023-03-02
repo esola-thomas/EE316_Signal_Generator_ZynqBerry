@@ -22,3 +22,15 @@ platform config -updatehw {/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/
 platform generate -domains 
 platform config -updatehw {/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/top_level_wrapper.xsa}
 platform generate -domains 
+platform active {top_level_wrapper}
+platform config -updatehw {C:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/top_level_wrapper.xsa}
+platform generate -domains standalone_ps7_cortexa9_0 
+platform active {top_level_wrapper}
+platform config -updatehw {C:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/top_level_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/top_level_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/top_level_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/top_level_wrapper.xsa}
+platform generate -domains 

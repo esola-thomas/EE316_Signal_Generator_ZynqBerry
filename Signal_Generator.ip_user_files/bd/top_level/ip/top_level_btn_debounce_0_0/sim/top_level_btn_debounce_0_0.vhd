@@ -56,19 +56,10 @@ USE ieee.numeric_std.ALL;
 ENTITY top_level_btn_debounce_0_0 IS
   PORT (
     btn : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    clk : IN STD_LOGIC;
     btn0 : OUT STD_LOGIC;
-    btn0_T : OUT STD_LOGIC;
-    btn0_P : OUT STD_LOGIC;
     btn1 : OUT STD_LOGIC;
-    btn1_T : OUT STD_LOGIC;
-    btn1_P : OUT STD_LOGIC;
     btn2 : OUT STD_LOGIC;
-    btn2_T : OUT STD_LOGIC;
-    btn2_P : OUT STD_LOGIC;
-    btn3 : OUT STD_LOGIC;
-    btn3_T : OUT STD_LOGIC;
-    btn3_P : OUT STD_LOGIC
+    btn3 : OUT STD_LOGIC
   );
 END top_level_btn_debounce_0_0;
 
@@ -78,41 +69,19 @@ ARCHITECTURE top_level_btn_debounce_0_0_arch OF top_level_btn_debounce_0_0 IS
   COMPONENT btn_debounce IS
     PORT (
       btn : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-      clk : IN STD_LOGIC;
       btn0 : OUT STD_LOGIC;
-      btn0_T : OUT STD_LOGIC;
-      btn0_P : OUT STD_LOGIC;
       btn1 : OUT STD_LOGIC;
-      btn1_T : OUT STD_LOGIC;
-      btn1_P : OUT STD_LOGIC;
       btn2 : OUT STD_LOGIC;
-      btn2_T : OUT STD_LOGIC;
-      btn2_P : OUT STD_LOGIC;
-      btn3 : OUT STD_LOGIC;
-      btn3_T : OUT STD_LOGIC;
-      btn3_P : OUT STD_LOGIC
+      btn3 : OUT STD_LOGIC
     );
   END COMPONENT btn_debounce;
-  ATTRIBUTE X_INTERFACE_INFO : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_level_processing_system7_0_3_FCLK_CLK0, INSERT_VIP 0";
-  ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
 BEGIN
   U0 : btn_debounce
     PORT MAP (
       btn => btn,
-      clk => clk,
       btn0 => btn0,
-      btn0_T => btn0_T,
-      btn0_P => btn0_P,
       btn1 => btn1,
-      btn1_T => btn1_T,
-      btn1_P => btn1_P,
       btn2 => btn2,
-      btn2_T => btn2_T,
-      btn2_P => btn2_P,
-      btn3 => btn3,
-      btn3_T => btn3_T,
-      btn3_P => btn3_P
+      btn3 => btn3
     );
 END top_level_btn_debounce_0_0_arch;

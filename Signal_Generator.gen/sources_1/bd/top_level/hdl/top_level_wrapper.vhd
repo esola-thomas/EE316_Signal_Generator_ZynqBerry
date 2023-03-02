@@ -1,8 +1,8 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
---Date        : Tue Feb 28 10:47:26 2023
---Host        : Alienware running 64-bit Ubuntu 22.04.2 LTS
+--Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+--Date        : Thu Mar  2 00:14:23 2023
+--Host        : CB195-UL-42 running 64-bit major release  (build 9200)
 --Command     : generate_target top_level_wrapper.bd
 --Design      : top_level_wrapper
 --Purpose     : IP block netlist
@@ -36,7 +36,11 @@ entity top_level_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
-    btn : in STD_LOGIC_VECTOR ( 3 downto 0 )
+    LCD_scl : inout STD_LOGIC;
+    LCD_sda : inout STD_LOGIC;
+    btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    oClock : out STD_LOGIC;
+    pwm_pulse : out STD_LOGIC
   );
 end top_level_wrapper;
 
@@ -66,7 +70,11 @@ architecture STRUCTURE of top_level_wrapper is
     FIXED_IO_ps_porb : inout STD_LOGIC;
     btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
     ADC_sda : inout STD_LOGIC;
-    ADC_scl : inout STD_LOGIC
+    ADC_scl : inout STD_LOGIC;
+    LCD_scl : inout STD_LOGIC;
+    LCD_sda : inout STD_LOGIC;
+    oClock : out STD_LOGIC;
+    pwm_pulse : out STD_LOGIC
   );
   end component top_level;
 begin
@@ -95,6 +103,10 @@ top_level_i: component top_level
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
-      btn(3 downto 0) => btn(3 downto 0)
+      LCD_scl => LCD_scl,
+      LCD_sda => LCD_sda,
+      btn(3 downto 0) => btn(3 downto 0),
+      oClock => oClock,
+      pwm_pulse => pwm_pulse
     );
 end STRUCTURE;

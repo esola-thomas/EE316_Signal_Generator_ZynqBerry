@@ -1,0 +1,10 @@
+vhdl xil_defaultlib  \
+"../../../bd/top_level/ip/top_level_adc_i2c_controller_0_0/sim/top_level_adc_i2c_controller_0_0.vhd" \
+"../../../bd/top_level/ip/top_level_ADC_dumy_driver_0_0/sim/top_level_ADC_dumy_driver_0_0.vhd" \
+"../../../bd/top_level/ip/top_level_PWM_Generator_0_0/sim/top_level_PWM_Generator_0_0.vhd" \
+"../../../bd/top_level/ip/top_level_Clock_Generation_0_0/sim/top_level_Clock_Generation_0_0.vhd" \
+"../../../bd/top_level/ip/top_level_btn_debounce_0_0/sim/top_level_btn_debounce_0_0.vhd" \
+"../../../bd/top_level/ip/top_level_LCD_controller_0_0/sim/top_level_LCD_controller_0_0.vhd" \
+"../../../bd/top_level/sim/top_level.vhd" \
+
+nosort
