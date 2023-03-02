@@ -143,6 +143,21 @@ set_property MARK_DEBUG true [get_nets top_level_i/pwm_pulse]
 connect_debug_port u_ila_0/probe4 [get_nets [list {top_level_i/i2c_adc_user_0/U0/FSM_onehot_state_reg_n_0_[0]}]]
 connect_debug_port u_ila_0/probe5 [get_nets [list {top_level_i/i2c_adc_user_0/U0/FSM_onehot_state_reg_n_0_[2]}]]
 
+
+set_property MARK_DEBUG true [get_nets top_level_i/i2c_adc_user_0/U0/busy_reg]
+set_property MARK_DEBUG true [get_nets top_level_i/i2c_adc_user_0/U0/second_i_1_n_0]
+set_property MARK_DEBUG true [get_nets top_level_i/i2c_adc_user_0/U0/second_i_2_n_0]
+set_property MARK_DEBUG true [get_nets top_level_i/i2c_adc_user_0/U0/second_reg_n_0]
+connect_debug_port u_ila_0/probe3 [get_nets [list top_level_i/i2c_adc_user_0/U0/busy_reg]]
+connect_debug_port u_ila_0/probe9 [get_nets [list top_level_i/i2c_adc_user_0/U0/second_i_1_n_0]]
+connect_debug_port u_ila_0/probe10 [get_nets [list top_level_i/i2c_adc_user_0/U0/second_i_2_n_0]]
+connect_debug_port u_ila_0/probe11 [get_nets [list top_level_i/i2c_adc_user_0/U0/second_reg_n_0]]
+
+
+set_property MARK_DEBUG true [get_nets top_level_i/util_vector_logic_0_Res_0]
+set_property MARK_DEBUG true [get_nets top_level_i/btn_debounce_0_btn3]
+
+set_property MARK_DEBUG true [get_nets top_level_i/oClock]
 create_debug_core u_ila_0 ila
 set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
 set_property ALL_PROBE_SAME_MU_CNT 4 [get_debug_cores u_ila_0]
@@ -156,11 +171,11 @@ set_property port_width 1 [get_debug_ports u_ila_0/clk]
 connect_debug_port u_ila_0/clk [get_nets [list top_level_i/processing_system7_0/inst/FCLK_CLK0]]
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
 set_property port_width 8 [get_debug_ports u_ila_0/probe0]
-connect_debug_port u_ila_0/probe0 [get_nets [list {top_level_i/i2c_adc_user_0/U0/i2c_data[0]} {top_level_i/i2c_adc_user_0/U0/i2c_data[1]} {top_level_i/i2c_adc_user_0/U0/i2c_data[2]} {top_level_i/i2c_adc_user_0/U0/i2c_data[3]} {top_level_i/i2c_adc_user_0/U0/i2c_data[4]} {top_level_i/i2c_adc_user_0/U0/i2c_data[5]} {top_level_i/i2c_adc_user_0/U0/i2c_data[6]} {top_level_i/i2c_adc_user_0/U0/i2c_data[7]}]]
+connect_debug_port u_ila_0/probe0 [get_nets [list {top_level_i/i2c_adc_user_0/U0/data_o[0]} {top_level_i/i2c_adc_user_0/U0/data_o[1]} {top_level_i/i2c_adc_user_0/U0/data_o[2]} {top_level_i/i2c_adc_user_0/U0/data_o[3]} {top_level_i/i2c_adc_user_0/U0/data_o[4]} {top_level_i/i2c_adc_user_0/U0/data_o[5]} {top_level_i/i2c_adc_user_0/U0/data_o[6]} {top_level_i/i2c_adc_user_0/U0/data_o[7]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
 set_property port_width 8 [get_debug_ports u_ila_0/probe1]
-connect_debug_port u_ila_0/probe1 [get_nets [list {top_level_i/i2c_adc_user_0/U0/data_o[0]} {top_level_i/i2c_adc_user_0/U0/data_o[1]} {top_level_i/i2c_adc_user_0/U0/data_o[2]} {top_level_i/i2c_adc_user_0/U0/data_o[3]} {top_level_i/i2c_adc_user_0/U0/data_o[4]} {top_level_i/i2c_adc_user_0/U0/data_o[5]} {top_level_i/i2c_adc_user_0/U0/data_o[6]} {top_level_i/i2c_adc_user_0/U0/data_o[7]}]]
+connect_debug_port u_ila_0/probe1 [get_nets [list {top_level_i/i2c_adc_user_0/U0/i2c_data[0]} {top_level_i/i2c_adc_user_0/U0/i2c_data[1]} {top_level_i/i2c_adc_user_0/U0/i2c_data[2]} {top_level_i/i2c_adc_user_0/U0/i2c_data[3]} {top_level_i/i2c_adc_user_0/U0/i2c_data[4]} {top_level_i/i2c_adc_user_0/U0/i2c_data[5]} {top_level_i/i2c_adc_user_0/U0/i2c_data[6]} {top_level_i/i2c_adc_user_0/U0/i2c_data[7]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
 set_property port_width 1 [get_debug_ports u_ila_0/probe2]
@@ -168,27 +183,43 @@ connect_debug_port u_ila_0/probe2 [get_nets [list {top_level_i/adc_sel[0]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
 set_property port_width 1 [get_debug_ports u_ila_0/probe3]
-connect_debug_port u_ila_0/probe3 [get_nets [list top_level_i/i2c_adc_user_0/U0/ena]]
+connect_debug_port u_ila_0/probe3 [get_nets [list top_level_i/btn_debounce_0_btn3]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
 set_property port_width 1 [get_debug_ports u_ila_0/probe4]
-connect_debug_port u_ila_0/probe4 [get_nets [list top_level_i/i2c_adc_user_0/U0/i2c_busy]]
+connect_debug_port u_ila_0/probe4 [get_nets [list top_level_i/i2c_adc_user_0/U0/busy_reg]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
 set_property port_width 1 [get_debug_ports u_ila_0/probe5]
-connect_debug_port u_ila_0/probe5 [get_nets [list top_level_i/pwm_pulse]]
+connect_debug_port u_ila_0/probe5 [get_nets [list top_level_i/i2c_adc_user_0/U0/ena]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
 set_property port_width 1 [get_debug_ports u_ila_0/probe6]
-connect_debug_port u_ila_0/probe6 [get_nets [list top_level_i/i2c_adc_user_0/U0/reset_n]]
+connect_debug_port u_ila_0/probe6 [get_nets [list top_level_i/i2c_adc_user_0/U0/i2c_busy]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
 set_property port_width 1 [get_debug_ports u_ila_0/probe7]
-connect_debug_port u_ila_0/probe7 [get_nets [list top_level_i/i2c_adc_user_0/U0/rw_reg_n_0]]
+connect_debug_port u_ila_0/probe7 [get_nets [list top_level_i/oClock]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe8]
 set_property port_width 1 [get_debug_ports u_ila_0/probe8]
-connect_debug_port u_ila_0/probe8 [get_nets [list top_level_i/i2c_adc_user_0/U0/state_btn]]
+connect_debug_port u_ila_0/probe8 [get_nets [list top_level_i/pwm_pulse]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe9]
+set_property port_width 1 [get_debug_ports u_ila_0/probe9]
+connect_debug_port u_ila_0/probe9 [get_nets [list top_level_i/i2c_adc_user_0/U0/reset_n]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe10]
+set_property port_width 1 [get_debug_ports u_ila_0/probe10]
+connect_debug_port u_ila_0/probe10 [get_nets [list top_level_i/i2c_adc_user_0/U0/rw_reg_n_0]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe11]
+set_property port_width 1 [get_debug_ports u_ila_0/probe11]
+connect_debug_port u_ila_0/probe11 [get_nets [list top_level_i/i2c_adc_user_0/U0/state_btn]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe12]
+set_property port_width 1 [get_debug_ports u_ila_0/probe12]
+connect_debug_port u_ila_0/probe12 [get_nets [list top_level_i/util_vector_logic_0_Res_0]]
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]

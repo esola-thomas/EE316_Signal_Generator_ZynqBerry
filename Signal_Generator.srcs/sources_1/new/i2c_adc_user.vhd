@@ -63,6 +63,8 @@ architecture behavioral of i2c_adc_user is
 	
 	signal busy_reg : std_logic;
 	
+	signal second : std_logic := '0';
+	signal states : std_logic_vector (2 downto 0) := "000";
 	begin
 	
 	reset_h <= reset_h_in or reset_delayed;
@@ -122,9 +124,37 @@ architecture behavioral of i2c_adc_user is
                     when read => 
                         rw         <= '1';              
                         i2c_enable <= '1';
-						if (i2c_busy = '1' and busy_reg = '0') then 
+						if (i2c_busy = '0' and busy_reg = '1') then 
 							state <= init;
+							second <= '0';
 						end if;
+						-- if (i2c_busy = '0' and busy_reg = '1' and second = '0') then
+						-- 	second <= '1';
+						-- elsif (i2c_busy = '0' and busy_reg = '1' and second = '1') then 
+						-- 	state <= init;
+						-- 	second <= '0';
+						-- end if;
+
+						-- if (states = "000") then
+						-- 	rw         <= '1';              
+                        -- 	i2c_enable <= '1';
+						-- 	if (i2c_busy = '0') then
+						-- 		 states <= "001";
+						-- 	end if;
+						-- elsif (states = "001") then -- 
+						-- 	rw         <= '1';              
+                        -- 	i2c_enable <= '1';
+						-- 	if (i2c_busy = '1') then
+						-- 		 states <= "011";
+						-- 	end if;
+						-- elsif (states = "011") then -- 
+						-- 	rw         <= '1';              
+                        -- 	i2c_enable <= '1';
+						-- 	if (i2c_busy = '0') then
+						-- 		 states <= "000";
+						-- 		 state <= init;
+						-- 	end if;
+						-- end if;
                 end case;
            end if;
         end if;
@@ -132,7 +162,8 @@ architecture behavioral of i2c_adc_user is
     end process;
 	process (clk) begin 
 		if (rising_edge(clk)) then 
-			busy_reg <= not i2c_busy;
+			-- busy_reg <= not i2c_busy;
+			busy_reg <= i2c_busy;
 		end if;
 	end process;
 end behavioral;

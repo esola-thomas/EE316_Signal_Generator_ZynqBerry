@@ -1,15 +1,15 @@
 {
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
-    "xci_name": "top_level_Clock_Generation_0_2",
+    "xci_name": "top_level_Clock_Generation_0_3",
     "cell_name": "Clock_Generation_0",
     "component_reference": "xilinx.com:module_ref:Clock_Generation:1.0",
     "ip_revision": "1",
-    "gen_directory": "../../../../../../Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_Clock_Generation_0_2",
+    "gen_directory": "../../../../../../Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_Clock_Generation_0_3",
     "parameters": {
       "component_parameters": {
         "N": [ { "value": "8", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "Component_Name": [ { "value": "top_level_Clock_Generation_0_2", "resolve_type": "user", "usage": "all" } ]
+        "Component_Name": [ { "value": "top_level_Clock_Generation_0_3", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
         "N": [ { "value": "8", "resolve_type": "generated", "format": "long", "usage": "all" } ]
@@ -33,7 +33,7 @@
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
         "IPREVISION": [ { "value": "1" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../../../Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_Clock_Generation_0_2" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../Signal_Generator.gen/sources_1/bd/top_level/ip/top_level_Clock_Generation_0_3" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2022.2" } ],

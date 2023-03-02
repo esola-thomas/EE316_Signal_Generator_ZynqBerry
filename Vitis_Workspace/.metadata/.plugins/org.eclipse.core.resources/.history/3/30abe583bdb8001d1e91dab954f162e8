@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="EE316_Project_3" location="/home/ernesto/repos/EE316_Signal_Generator_ZynqBerry/Vitis_Workspace/EE316_Project_3" platform="C:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/Vitis_Workspace/top_level_wrapper/export/top_level_wrapper/top_level_wrapper.xpfm" platformUID="xilinx:te0726_7s_1c::0.0(custom)" systemProject="EE316_Project_3_system" sysConfig="top_level_wrapper" runtime="cpp" cpu="standalone_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="ea03881a524da8651cf925e4dd3ab0fb">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.284002444">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1380678226" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

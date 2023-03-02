@@ -77,7 +77,7 @@ begin
 		port map(
 --				max_tick, min_tick, syn_clr, load, up, d,
 				clk				=> clk,
-				reset			=> internal_reset,
+				reset			=> reset,
 				en 				=> enable,
 				clk_en 			=> clk_gen_en,
 				d		     	=> count_reset,

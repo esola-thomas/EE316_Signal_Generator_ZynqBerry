@@ -7,18 +7,19 @@
       "name": "top_level",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "None",
-      "tool_version": "2022.2"
+      "tool_version": "2022.2",
+      "validated": "true"
     },
     "design_tree": {
-      "ADC_dumy_driver_0": "",
       "processing_system7_0": "",
       "btn_master_0": "",
       "PWM_Generator_0": "",
       "util_vector_logic_0": "",
       "i2c_LCD_controller_0": "",
-      "Clock_Generation_0": "",
       "StateMachine_0": "",
-      "i2c_adc_user_0": ""
+      "i2c_adc_user_0": "",
+      "ADC_dumy_driver_0": "",
+      "Clock_Generation_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -216,51 +217,6 @@
       }
     },
     "components": {
-      "ADC_dumy_driver_0": {
-        "vlnv": "xilinx.com:module_ref:ADC_dumy_driver:1.0",
-        "xci_name": "top_level_ADC_dumy_driver_0_0",
-        "xci_path": "ip\\top_level_ADC_dumy_driver_0_0\\top_level_ADC_dumy_driver_0_0.xci",
-        "inst_hier_path": "ADC_dumy_driver_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "ADC_dumy_driver",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "50000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "top_level_processing_system7_0_3_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "data_rd": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "analog_o_en": {
-            "direction": "O"
-          },
-          "AIN_mode": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "AIN_sel": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          }
-        }
-      },
       "processing_system7_0": {
         "vlnv": "xilinx.com:ip:processing_system7:5.5",
         "xci_name": "top_level_processing_system7_0_3",
@@ -1339,6 +1295,18 @@
               "PortType.PROP_SRC": {
                 "value": "false",
                 "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "top_level_processing_system7_0_3_FCLK_CLK0",
+                "value_src": "default_prop"
               }
             }
           },
@@ -1497,48 +1465,6 @@
           }
         }
       },
-      "Clock_Generation_0": {
-        "vlnv": "xilinx.com:module_ref:Clock_Generation:1.0",
-        "xci_name": "top_level_Clock_Generation_0_2",
-        "xci_path": "ip\\top_level_Clock_Generation_0_2\\top_level_Clock_Generation_0_2.xci",
-        "inst_hier_path": "Clock_Generation_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "Clock_Generation",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "50000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "top_level_processing_system7_0_3_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "reset_n": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "clk_gen_en": {
-            "direction": "I"
-          },
-          "ADC_in": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "oClock": {
-            "direction": "O"
-          }
-        }
-      },
       "StateMachine_0": {
         "vlnv": "xilinx.com:module_ref:StateMachine:1.0",
         "xci_name": "top_level_StateMachine_0_2",
@@ -1604,14 +1530,46 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "top_level_processing_system7_0_3_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
           },
           "reset_h_in": {
             "type": "rst",
             "direction": "I"
           },
           "state_btn": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "top_level_processing_system7_0_3_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
           },
           "busy_h": {
             "direction": "O"
@@ -1631,6 +1589,115 @@
           },
           "scl_adc": {
             "direction": "IO"
+          }
+        }
+      },
+      "ADC_dumy_driver_0": {
+        "vlnv": "xilinx.com:module_ref:ADC_dumy_driver:1.0",
+        "xci_name": "top_level_ADC_dumy_driver_0_0",
+        "xci_path": "ip\\top_level_ADC_dumy_driver_0_0\\top_level_ADC_dumy_driver_0_0.xci",
+        "inst_hier_path": "ADC_dumy_driver_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ADC_dumy_driver",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "top_level_processing_system7_0_3_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "data_rd": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "analog_o_en": {
+            "direction": "O"
+          },
+          "AIN_mode": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "AIN_sel": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          }
+        }
+      },
+      "Clock_Generation_0": {
+        "vlnv": "xilinx.com:module_ref:Clock_Generation:1.0",
+        "xci_name": "top_level_Clock_Generation_0_3",
+        "xci_path": "ip\\top_level_Clock_Generation_0_3\\top_level_Clock_Generation_0_3.xci",
+        "inst_hier_path": "Clock_Generation_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Clock_Generation",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "top_level_processing_system7_0_3_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "reset_n": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_gen_en": {
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "top_level_processing_system7_0_3_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ADC_in": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "oClock": {
+            "direction": "O"
           }
         }
       }
@@ -1715,8 +1782,8 @@
           "btn_master_0/btn_0",
           "PWM_Generator_0/reset_n",
           "util_vector_logic_0/Op1",
-          "Clock_Generation_0/reset_n",
-          "StateMachine_0/reset_n"
+          "StateMachine_0/reset_n",
+          "PWM_Generator_0/clk_en"
         ]
       },
       "btn_master_0_btn_1": {
@@ -1729,28 +1796,29 @@
         "ports": [
           "i2c_adc_user_0/data_o",
           "PWM_Generator_0/counter_max",
-          "Clock_Generation_0/ADC_in",
-          "ADC_dumy_driver_0/data_rd"
+          "ADC_dumy_driver_0/data_rd",
+          "Clock_Generation_0/ADC_in"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",
-          "ADC_dumy_driver_0/clk",
           "PWM_Generator_0/clk",
           "i2c_LCD_controller_0/clk",
-          "Clock_Generation_0/clk",
           "StateMachine_0/clk",
-          "i2c_adc_user_0/clk"
+          "i2c_adc_user_0/clk",
+          "ADC_dumy_driver_0/clk",
+          "Clock_Generation_0/clk"
         ]
       },
       "util_vector_logic_0_Res": {
         "ports": [
           "util_vector_logic_0/Res",
           "i2c_LCD_controller_0/reset",
-          "PWM_Generator_0/clk_en",
           "i2c_adc_user_0/reset_h_in",
-          "i2c_adc_user_0/state_btn"
+          "i2c_adc_user_0/state_btn",
+          "Clock_Generation_0/reset_n",
+          "Clock_Generation_0/clk_gen_en"
         ]
       }
     }

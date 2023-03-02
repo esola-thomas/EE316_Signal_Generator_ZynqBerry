@@ -34,3 +34,5 @@ platform config -updatehw {C:/Users/schumae/Documents/EE316_Signal_Generator_Zyn
 platform generate -domains 
 platform config -updatehw {C:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/top_level_wrapper.xsa}
 platform generate -domains 
+platform config -updatehw {C:/Users/schumae/Documents/EE316_Signal_Generator_ZynqBerry/top_level_wrapper.xsa}
+platform generate -domains 

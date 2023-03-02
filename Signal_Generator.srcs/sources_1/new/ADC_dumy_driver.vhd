@@ -47,7 +47,7 @@ begin
 
     process (clk) is begin 
         if (rising_edge(clk)) then
-            if (counter = 20000) then 
+            if (counter = 4000001) then 
                 counter <= 0;
             else 
                 counter <= counter + 1;
@@ -59,7 +59,9 @@ begin
     analog_o_en     <= '0';
     AIN_mode        <= "00";
     AIN_sel         <= "00" when counter < 10000 else 
-                        "01" when counter > 10000 else
+                        "01" when counter > 1000000 and counter < 2000000 else
+                        "10" when counter > 2000000 and counter < 3000000 else
+                        "11" when counter > 3000000 and counter < 4000000 else
                         "00";
 
 end Behavioral;

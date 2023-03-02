@@ -46,62 +46,42 @@
 -- 
 -- DO NOT MODIFY THIS FILE.
 
--- IP VLNV: xilinx.com:module_ref:Clock_Generation:1.0
+-- IP VLNV: xilinx.com:module_ref:btn_master:1.0
 -- IP Revision: 1
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-ENTITY top_level_Clock_Generation_0_2 IS
+ENTITY top_level_btn_master_0_0 IS
   PORT (
-    clk : IN STD_LOGIC;
-    reset_n : IN STD_LOGIC;
-    clk_gen_en : IN STD_LOGIC;
-    ADC_in : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    oClock : OUT STD_LOGIC
+    btn_in : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    btn_0 : OUT STD_LOGIC;
+    btn_1 : OUT STD_LOGIC;
+    btn_2 : OUT STD_LOGIC;
+    btn_3 : OUT STD_LOGIC
   );
-END top_level_Clock_Generation_0_2;
+END top_level_btn_master_0_0;
 
-ARCHITECTURE top_level_Clock_Generation_0_2_arch OF top_level_Clock_Generation_0_2 IS
+ARCHITECTURE top_level_btn_master_0_0_arch OF top_level_btn_master_0_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
-  ATTRIBUTE DowngradeIPIdentifiedWarnings OF top_level_Clock_Generation_0_2_arch: ARCHITECTURE IS "yes";
-  COMPONENT Clock_Generation IS
-    GENERIC (
-      N : INTEGER
-    );
+  ATTRIBUTE DowngradeIPIdentifiedWarnings OF top_level_btn_master_0_0_arch: ARCHITECTURE IS "yes";
+  COMPONENT btn_master IS
     PORT (
-      clk : IN STD_LOGIC;
-      reset_n : IN STD_LOGIC;
-      clk_gen_en : IN STD_LOGIC;
-      ADC_in : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-      oClock : OUT STD_LOGIC
+      btn_in : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+      btn_0 : OUT STD_LOGIC;
+      btn_1 : OUT STD_LOGIC;
+      btn_2 : OUT STD_LOGIC;
+      btn_3 : OUT STD_LOGIC
     );
-  END COMPONENT Clock_Generation;
-  ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF top_level_Clock_Generation_0_2_arch: ARCHITECTURE IS "Clock_Generation,Vivado 2022.2";
-  ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
-  ATTRIBUTE CHECK_LICENSE_TYPE OF top_level_Clock_Generation_0_2_arch : ARCHITECTURE IS "top_level_Clock_Generation_0_2,Clock_Generation,{}";
-  ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF top_level_Clock_Generation_0_2_arch: ARCHITECTURE IS "top_level_Clock_Generation_0_2,Clock_Generation,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=Clock_Generation,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,N=8}";
-  ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
-  ATTRIBUTE IP_DEFINITION_SOURCE OF top_level_Clock_Generation_0_2_arch: ARCHITECTURE IS "module_ref";
-  ATTRIBUTE X_INTERFACE_INFO : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_level_processing_system7_0_3_FCLK_CLK0, INSERT_VIP 0";
-  ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF reset_n: SIGNAL IS "XIL_INTERFACENAME reset_n, POLARITY ACTIVE_LOW, INSERT_VIP 0";
-  ATTRIBUTE X_INTERFACE_INFO OF reset_n: SIGNAL IS "xilinx.com:signal:reset:1.0 reset_n RST";
+  END COMPONENT btn_master;
 BEGIN
-  U0 : Clock_Generation
-    GENERIC MAP (
-      N => 8
-    )
+  U0 : btn_master
     PORT MAP (
-      clk => clk,
-      reset_n => reset_n,
-      clk_gen_en => clk_gen_en,
-      ADC_in => ADC_in,
-      oClock => oClock
+      btn_in => btn_in,
+      btn_0 => btn_0,
+      btn_1 => btn_1,
+      btn_2 => btn_2,
+      btn_3 => btn_3
     );
-END top_level_Clock_Generation_0_2_arch;
+END top_level_btn_master_0_0_arch;
