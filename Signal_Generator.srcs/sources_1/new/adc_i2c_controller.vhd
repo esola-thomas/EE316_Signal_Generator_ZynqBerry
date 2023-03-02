@@ -82,6 +82,7 @@ signal ADC_data_Control     : std_logic_vector(7 downto 0); -- Control Bit
 signal ADC_data_Adress      : std_logic_vector(7 downto 0); -- Adress Bit (The fist one sent)
 signal ADC_data_rd          : std_logic_vector (7 downto 0); -- Data reg to store locally the data sent by the ADC
 
+signal busy_reg : std_logic := '0';
 begin
 -- 7    (MSB) Always first bit is 0
 -- 6    Second bit is analog output enable 0 off 1 enable
@@ -106,7 +107,13 @@ i2c_inst : i2c_master port map (
     scl       => scl  
 );
 
-process (clk, reset_n) begin
+process (clk) begin
+    if (rising_edge(clk)) then
+        busy_reg <= busy;
+    end if; 
+end process;
+
+process (clk, reset_n, busy) begin
     if (reset_n = '0') then
         ena <= '0';
         send_byte <= Address;
@@ -118,7 +125,7 @@ process (clk, reset_n) begin
                 ena <= '1';
                 if (busy = '1') then 
                     send_byte <= Address;
-                else 
+                elsif (busy = '0' and busy_reg = '1') then
                     send_byte <= Control;
                 end if;
 
@@ -128,7 +135,7 @@ process (clk, reset_n) begin
                 ena <= '1';
                 if (busy = '1') then 
                     send_byte <= Control;
-                else 
+                elsif (busy = '0' and busy_reg = '1') then
                     send_byte <= Data1;
                 end if;
 
@@ -139,7 +146,7 @@ process (clk, reset_n) begin
                 data_rd <= ADC_data_rd;
                 if (busy = '1') then 
                     send_byte <= Data1;
-                else 
+                elsif (busy = '0' and busy_reg = '1') then
                     send_byte <= Address;
                 end if;
 
@@ -150,7 +157,7 @@ process (clk, reset_n) begin
                 data_rd <= ADC_data_rd;
                 if (busy = '1') then 
                     send_byte <= Address;
-                else 
+                elsif (busy = '0' and busy_reg = '1') then
                     send_byte <= Address;
                 end if;
         end case;

@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity PWM_Generator is
    generic(N: integer := 8);
    port(
-			clk, reset					: in std_logic;
+			clk, reset_n				: in std_logic;
 			clk_en 						: in std_logic := '1';			
 			counter_max					: in std_logic_vector(N-1 downto 0); --Counter max is the 8-Bit ADC value
 			pwm_pulse					: out std_logic
@@ -32,6 +32,8 @@ component univ_bin_counter is
 	signal pulse						: std_logic;
 	
 	signal enable						: std_logic := '1';
+
+	signal reset : std_logic;
 	
 begin
 
@@ -39,7 +41,7 @@ begin
    begin
 		if (clk_en = '1') then
 			if rising_edge(clk) then
-				if unsigned(counter_out) <= unsigned(counter_max) then
+				if unsigned(counter_out) < unsigned(counter_max) then
 					pulse <= '1';
 				else
 					pulse <= '0';
@@ -64,5 +66,6 @@ begin
 	
 	-- Send out to pulse
 	pwm_pulse        <= pulse;
+	reset <= not reset_n;
 	
 end arch;

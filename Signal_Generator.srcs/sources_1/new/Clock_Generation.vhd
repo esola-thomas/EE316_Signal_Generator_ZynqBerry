@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity Clock_Generation is
    generic(N: integer := 8);
    port(
-			clk, reset					: in std_logic;
+			clk, reset_n				: in std_logic;
 			clk_gen_en 					: in std_logic := '1';			
 			ADC_in					    : in std_logic_vector(N-1 downto 0); --Counter max is the 8-Bit ADC value
 			oClock					    : out std_logic
@@ -34,6 +34,8 @@ component univ_bin_counter is
 	signal readData                     : std_logic_vector(7 downto 0) := (others => '0');
 	
 	signal enable						: std_logic := '1';
+
+	signal reset : std_logic;
 	
 begin
 
@@ -84,5 +86,6 @@ begin
 	
 	-- Send out Clock
 	oClock        <= clk_pulse;
+	reset <= not reset_n;
 	
 end arch;
