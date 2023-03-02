@@ -11,8 +11,7 @@ entity StateMachine is
 			state_fix				: out std_logic_vector(3 downto 0);
 		    clkon   				: out std_logic;		
 			toprow					: out std_logic_vector(127 downto 0);
-			botrow					: out std_logic_vector(127 downto 0) 		
- 		
+			botrow					: out std_logic_vector(127 downto 0) 			
    );
    
 end StateMachine;
@@ -23,7 +22,7 @@ architecture arch of StateMachine is
 	signal state    : state_type := Init;   
     signal reset    : std_logic;
 begin
-   process(clk, reset)
+   process(clk, reset, cycle)
    begin
 --      if Reset = '0' then    -----------Reset state - need to work on more
 --		state	<= Init;
@@ -34,11 +33,14 @@ case state is
     when Init => 									-- Init
     state_fix <= "0000";
     clkon <= '0';
-    state <= LDRClk;
+--    state <= LDRClk;
     toprow <= X"496e697469616c697a696e672e2e2e20"; --"Initlaizing..."
     botrow <= X"20202020202020202020202020202020"; --CLEAR 
     if reset ='1' then
         state <= Init;
+    end if;
+    if cycle ='1' then
+        state <= LDRClk;
     end if;
         
     when LDRClk =>

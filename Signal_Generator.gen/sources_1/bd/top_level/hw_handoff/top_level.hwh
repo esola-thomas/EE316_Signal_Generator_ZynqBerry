@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Mar  2 02:17:57 2023" VIVADOVERSION="2022.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Mar  2 14:17:02 2023" VIVADOVERSION="2022.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="trenz.biz:te0726_10_1c:part0:2.1" DEVICE="7z010" NAME="top_level" PACKAGE="clg225" SPEEDGRADE="-1"/>
 
@@ -109,11 +109,6 @@
         <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="3" NAME="btn" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_btn">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="btn_master_0" PORT="btn_in"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="IO" NAME="ADC_sda" SIGIS="undef" SIGNAME="External_Ports_ADC_sda">
       <CONNECTIONS>
         <CONNECTION INSTANCE="i2c_adc_user_0" PORT="sda_adc"/>
@@ -126,12 +121,12 @@
     </PORT>
     <PORT DIR="IO" NAME="LCD_scl" SIGIS="undef" SIGNAME="External_Ports_LCD_scl">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="i2c_LCD_controller_0" PORT="scl"/>
+        <CONNECTION INSTANCE="i2c_LCD_controller_0" PORT="SCL"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="IO" NAME="LCD_sda" SIGIS="undef" SIGNAME="External_Ports_LCD_sda">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="i2c_LCD_controller_0" PORT="sda"/>
+        <CONNECTION INSTANCE="i2c_LCD_controller_0" PORT="SDA"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="oClock" SIGIS="undef" SIGNAME="Clock_Generation_0_oClock">
@@ -142,6 +137,11 @@
     <PORT DIR="O" NAME="pwm_pulse" SIGIS="undef" SIGNAME="PWM_Generator_0_pwm_pulse">
       <CONNECTIONS>
         <CONNECTION INSTANCE="PWM_Generator_0" PORT="pwm_pulse"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="btn" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_btn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="btn_master_0" PORT="btn_in"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -270,14 +270,14 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="btn_master_0_btn_0">
+        <PORT DIR="I" NAME="reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="util_vector_logic_0_Res">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="btn_master_0" PORT="btn_0"/>
+            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="clk_en" SIGIS="undef" SIGNAME="btn_master_0_btn_0">
+        <PORT DIR="I" NAME="clk_en" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="btn_master_0" PORT="btn_0"/>
+            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="7" NAME="counter_max" RIGHT="0" SIGIS="undef" SIGNAME="i2c_adc_user_0_data_o">
@@ -305,9 +305,9 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="btn_master_0_btn_0">
+        <PORT DIR="I" NAME="reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="util_vector_logic_0_Res">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="btn_master_0" PORT="btn_0"/>
+            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="cycle" SIGIS="undef" SIGNAME="btn_master_0_btn_1">
@@ -344,10 +344,10 @@
         </PORT>
         <PORT DIR="O" NAME="btn_0" SIGIS="undef" SIGNAME="btn_master_0_btn_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="PWM_Generator_0" PORT="reset_n"/>
             <CONNECTION INSTANCE="util_vector_logic_0" PORT="Op1"/>
-            <CONNECTION INSTANCE="StateMachine_0" PORT="reset_n"/>
-            <CONNECTION INSTANCE="PWM_Generator_0" PORT="clk_en"/>
+            <CONNECTION INSTANCE="i2c_adc_user_0" PORT="reset_h_in"/>
+            <CONNECTION INSTANCE="i2c_LCD_controller_0" PORT="reset"/>
+            <CONNECTION INSTANCE="i2c_adc_user_0" PORT="state_btn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="btn_1" SIGIS="undef" SIGNAME="btn_master_0_btn_1">
@@ -363,18 +363,19 @@
     <MODULE COREREVISION="1" FULLNAME="/i2c_LCD_controller_0" HWVERSION="1.0" INSTANCE="i2c_LCD_controller_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="i2c_LCD_controller" VLNV="xilinx.com:module_ref:i2c_LCD_controller:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
+        <PARAMETER NAME="input_clk" VALUE="50000000"/>
         <PARAMETER NAME="Component_Name" VALUE="top_level_i2c_LCD_controller_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="btn_master_0_btn_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="btn_master_0" PORT="btn_0"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="util_vector_logic_0_Res">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="127" NAME="top" RIGHT="0" SIGIS="undef" SIGNAME="StateMachine_0_toprow">
@@ -387,13 +388,18 @@
             <CONNECTION INSTANCE="StateMachine_0" PORT="botrow"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="Dout" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="IO" NAME="sda" SIGIS="undef" SIGNAME="External_Ports_LCD_sda">
+        <PORT DIR="O" LEFT="7" NAME="lcd_data" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="lcd_rs" SIGIS="undef"/>
+        <PORT DIR="O" NAME="lcd_en" SIGIS="undef"/>
+        <PORT DIR="O" NAME="lcd_on" SIGIS="undef"/>
+        <PORT DIR="O" NAME="lcd_blon" SIGIS="undef"/>
+        <PORT DIR="O" NAME="lcd_rw" SIGIS="undef"/>
+        <PORT DIR="IO" NAME="SDA" SIGIS="undef" SIGNAME="External_Ports_LCD_sda">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="LCD_sda"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="IO" NAME="scl" SIGIS="undef" SIGNAME="External_Ports_LCD_scl">
+        <PORT DIR="IO" NAME="SCL" SIGIS="undef" SIGNAME="External_Ports_LCD_scl">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="LCD_scl"/>
           </CONNECTIONS>
@@ -414,14 +420,14 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="reset_h_in" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="util_vector_logic_0_Res">
+        <PORT DIR="I" NAME="reset_h_in" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="btn_master_0_btn_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
+            <CONNECTION INSTANCE="btn_master_0" PORT="btn_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="state_btn" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
+        <PORT DIR="I" NAME="state_btn" SIGIS="undef" SIGNAME="btn_master_0_btn_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
+            <CONNECTION INSTANCE="btn_master_0" PORT="btn_0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="busy_h" SIGIS="undef"/>
@@ -1395,11 +1401,11 @@
         <PORT CLKFREQUENCY="50000000" DIR="O" NAME="FCLK_CLK0" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="PWM_Generator_0" PORT="clk"/>
-            <CONNECTION INSTANCE="i2c_LCD_controller_0" PORT="clk"/>
-            <CONNECTION INSTANCE="StateMachine_0" PORT="clk"/>
             <CONNECTION INSTANCE="i2c_adc_user_0" PORT="clk"/>
             <CONNECTION INSTANCE="ADC_dumy_driver_0" PORT="clk"/>
             <CONNECTION INSTANCE="Clock_Generation_0" PORT="clk"/>
+            <CONNECTION INSTANCE="i2c_LCD_controller_0" PORT="clk"/>
+            <CONNECTION INSTANCE="StateMachine_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
@@ -1575,11 +1581,11 @@
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2c_LCD_controller_0" PORT="reset"/>
-            <CONNECTION INSTANCE="i2c_adc_user_0" PORT="reset_h_in"/>
-            <CONNECTION INSTANCE="i2c_adc_user_0" PORT="state_btn"/>
+            <CONNECTION INSTANCE="PWM_Generator_0" PORT="reset_n"/>
             <CONNECTION INSTANCE="Clock_Generation_0" PORT="reset_n"/>
+            <CONNECTION INSTANCE="StateMachine_0" PORT="reset_n"/>
             <CONNECTION INSTANCE="Clock_Generation_0" PORT="clk_gen_en"/>
+            <CONNECTION INSTANCE="PWM_Generator_0" PORT="clk_en"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

@@ -43,7 +43,7 @@ architecture Behavioral of btn_master is
 
 begin
         
-    btn_0 <= not btn_in(0);
+    btn_0 <= btn_in(0);
     btn_1 <= not btn_in(1);
     btn_2 <= not btn_in(2);
     btn_3 <= not btn_in(3);

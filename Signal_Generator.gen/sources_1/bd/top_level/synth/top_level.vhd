@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Thu Mar  2 02:17:57 2023
+--Date        : Thu Mar  2 14:17:02 2023
 --Host        : CB195-UL-42 running 64-bit major release  (build 9200)
 --Command     : generate_target top_level.bd
 --Design      : top_level
@@ -76,15 +76,6 @@ architecture STRUCTURE of top_level is
     PS_PORB : inout STD_LOGIC
   );
   end component top_level_processing_system7_0_3;
-  component top_level_btn_master_0_0 is
-  port (
-    btn_in : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    btn_0 : out STD_LOGIC;
-    btn_1 : out STD_LOGIC;
-    btn_2 : out STD_LOGIC;
-    btn_3 : out STD_LOGIC
-  );
-  end component top_level_btn_master_0_0;
   component top_level_PWM_Generator_0_2 is
   port (
     clk : in STD_LOGIC;
@@ -100,28 +91,6 @@ architecture STRUCTURE of top_level is
     Res : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component top_level_util_vector_logic_0_0;
-  component top_level_i2c_LCD_controller_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    top : in STD_LOGIC_VECTOR ( 127 downto 0 );
-    bot : in STD_LOGIC_VECTOR ( 127 downto 0 );
-    Dout : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    sda : inout STD_LOGIC;
-    scl : inout STD_LOGIC
-  );
-  end component top_level_i2c_LCD_controller_0_0;
-  component top_level_StateMachine_0_2 is
-  port (
-    clk : in STD_LOGIC;
-    reset_n : in STD_LOGIC;
-    cycle : in STD_LOGIC;
-    state_fix : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    clkon : out STD_LOGIC;
-    toprow : out STD_LOGIC_VECTOR ( 127 downto 0 );
-    botrow : out STD_LOGIC_VECTOR ( 127 downto 0 )
-  );
-  end component top_level_StateMachine_0_2;
   component top_level_i2c_adc_user_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -152,6 +121,42 @@ architecture STRUCTURE of top_level is
     oClock : out STD_LOGIC
   );
   end component top_level_Clock_Generation_0_3;
+  component top_level_i2c_LCD_controller_0_0 is
+  port (
+    reset : in STD_LOGIC;
+    clk : in STD_LOGIC;
+    top : in STD_LOGIC_VECTOR ( 127 downto 0 );
+    bot : in STD_LOGIC_VECTOR ( 127 downto 0 );
+    lcd_data : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    lcd_rs : out STD_LOGIC;
+    lcd_en : out STD_LOGIC;
+    lcd_on : out STD_LOGIC;
+    lcd_blon : out STD_LOGIC;
+    lcd_rw : out STD_LOGIC;
+    SDA : inout STD_LOGIC;
+    SCL : inout STD_LOGIC
+  );
+  end component top_level_i2c_LCD_controller_0_0;
+  component top_level_StateMachine_0_2 is
+  port (
+    clk : in STD_LOGIC;
+    reset_n : in STD_LOGIC;
+    cycle : in STD_LOGIC;
+    state_fix : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    clkon : out STD_LOGIC;
+    toprow : out STD_LOGIC_VECTOR ( 127 downto 0 );
+    botrow : out STD_LOGIC_VECTOR ( 127 downto 0 )
+  );
+  end component top_level_StateMachine_0_2;
+  component top_level_btn_master_0_0 is
+  port (
+    btn_in : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    btn_0 : out STD_LOGIC;
+    btn_1 : out STD_LOGIC;
+    btn_2 : out STD_LOGIC;
+    btn_3 : out STD_LOGIC
+  );
+  end component top_level_btn_master_0_0;
   signal ADC_dumy_driver_0_AIN_sel : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal Clock_Generation_0_oClock : STD_LOGIC;
   signal Net : STD_LOGIC;
@@ -162,7 +167,7 @@ architecture STRUCTURE of top_level is
   signal StateMachine_0_botrow : STD_LOGIC_VECTOR ( 127 downto 0 );
   signal StateMachine_0_toprow : STD_LOGIC_VECTOR ( 127 downto 0 );
   signal btn_1 : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal btn_debounce_0_btn3 : STD_LOGIC;
+  signal btn_master_0_btn_0 : STD_LOGIC;
   signal btn_master_0_btn_1 : STD_LOGIC;
   signal i2c_adc_user_0_data_o : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
@@ -194,7 +199,12 @@ architecture STRUCTURE of top_level is
   signal NLW_StateMachine_0_state_fix_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_btn_master_0_btn_2_UNCONNECTED : STD_LOGIC;
   signal NLW_btn_master_0_btn_3_UNCONNECTED : STD_LOGIC;
-  signal NLW_i2c_LCD_controller_0_Dout_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal NLW_i2c_LCD_controller_0_lcd_blon_UNCONNECTED : STD_LOGIC;
+  signal NLW_i2c_LCD_controller_0_lcd_en_UNCONNECTED : STD_LOGIC;
+  signal NLW_i2c_LCD_controller_0_lcd_on_UNCONNECTED : STD_LOGIC;
+  signal NLW_i2c_LCD_controller_0_lcd_rs_UNCONNECTED : STD_LOGIC;
+  signal NLW_i2c_LCD_controller_0_lcd_rw_UNCONNECTED : STD_LOGIC;
+  signal NLW_i2c_LCD_controller_0_lcd_data_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_i2c_adc_user_0_busy_h_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_FCLK_RESET0_N_UNCONNECTED : STD_LOGIC;
   attribute x_interface_info : string;
@@ -245,10 +255,10 @@ Clock_Generation_0: component top_level_Clock_Generation_0_3
 PWM_Generator_0: component top_level_PWM_Generator_0_2
      port map (
       clk => processing_system7_0_FCLK_CLK0,
-      clk_en => btn_debounce_0_btn3,
+      clk_en => util_vector_logic_0_Res(0),
       counter_max(7 downto 0) => i2c_adc_user_0_data_o(7 downto 0),
       pwm_pulse => PWM_Generator_0_pwm_pulse,
-      reset_n => btn_debounce_0_btn3
+      reset_n => util_vector_logic_0_Res(0)
     );
 StateMachine_0: component top_level_StateMachine_0_2
      port map (
@@ -256,13 +266,13 @@ StateMachine_0: component top_level_StateMachine_0_2
       clk => processing_system7_0_FCLK_CLK0,
       clkon => NLW_StateMachine_0_clkon_UNCONNECTED,
       cycle => btn_master_0_btn_1,
-      reset_n => btn_debounce_0_btn3,
+      reset_n => util_vector_logic_0_Res(0),
       state_fix(3 downto 0) => NLW_StateMachine_0_state_fix_UNCONNECTED(3 downto 0),
       toprow(127 downto 0) => StateMachine_0_toprow(127 downto 0)
     );
 btn_master_0: component top_level_btn_master_0_0
      port map (
-      btn_0 => btn_debounce_0_btn3,
+      btn_0 => btn_master_0_btn_0,
       btn_1 => btn_master_0_btn_1,
       btn_2 => NLW_btn_master_0_btn_2_UNCONNECTED,
       btn_3 => NLW_btn_master_0_btn_3_UNCONNECTED,
@@ -270,12 +280,17 @@ btn_master_0: component top_level_btn_master_0_0
     );
 i2c_LCD_controller_0: component top_level_i2c_LCD_controller_0_0
      port map (
-      Dout(7 downto 0) => NLW_i2c_LCD_controller_0_Dout_UNCONNECTED(7 downto 0),
+      SCL => LCD_scl,
+      SDA => LCD_sda,
       bot(127 downto 0) => StateMachine_0_botrow(127 downto 0),
       clk => processing_system7_0_FCLK_CLK0,
-      reset => util_vector_logic_0_Res(0),
-      scl => LCD_scl,
-      sda => LCD_sda,
+      lcd_blon => NLW_i2c_LCD_controller_0_lcd_blon_UNCONNECTED,
+      lcd_data(7 downto 0) => NLW_i2c_LCD_controller_0_lcd_data_UNCONNECTED(7 downto 0),
+      lcd_en => NLW_i2c_LCD_controller_0_lcd_en_UNCONNECTED,
+      lcd_on => NLW_i2c_LCD_controller_0_lcd_on_UNCONNECTED,
+      lcd_rs => NLW_i2c_LCD_controller_0_lcd_rs_UNCONNECTED,
+      lcd_rw => NLW_i2c_LCD_controller_0_lcd_rw_UNCONNECTED,
+      reset => btn_master_0_btn_0,
       top(127 downto 0) => StateMachine_0_toprow(127 downto 0)
     );
 i2c_adc_user_0: component top_level_i2c_adc_user_0_0
@@ -284,10 +299,10 @@ i2c_adc_user_0: component top_level_i2c_adc_user_0_0
       busy_h => NLW_i2c_adc_user_0_busy_h_UNCONNECTED,
       clk => processing_system7_0_FCLK_CLK0,
       data_o(7 downto 0) => i2c_adc_user_0_data_o(7 downto 0),
-      reset_h_in => util_vector_logic_0_Res(0),
+      reset_h_in => btn_master_0_btn_0,
       scl_adc => ADC_scl,
       sda_adc => ADC_sda,
-      state_btn => util_vector_logic_0_Res(0)
+      state_btn => btn_master_0_btn_0
     );
 processing_system7_0: component top_level_processing_system7_0_3
      port map (
@@ -317,7 +332,7 @@ processing_system7_0: component top_level_processing_system7_0_3
     );
 util_vector_logic_0: component top_level_util_vector_logic_0_0
      port map (
-      Op1(0) => btn_debounce_0_btn3,
+      Op1(0) => btn_master_0_btn_0,
       Res(0) => util_vector_logic_0_Res(0)
     );
 end STRUCTURE;

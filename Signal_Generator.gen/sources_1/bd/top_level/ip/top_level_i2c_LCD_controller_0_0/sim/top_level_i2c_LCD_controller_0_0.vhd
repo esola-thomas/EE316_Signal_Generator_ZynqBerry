@@ -55,13 +55,18 @@ USE ieee.numeric_std.ALL;
 
 ENTITY top_level_i2c_LCD_controller_0_0 IS
   PORT (
-    clk : IN STD_LOGIC;
     reset : IN STD_LOGIC;
+    clk : IN STD_LOGIC;
     top : IN STD_LOGIC_VECTOR(127 DOWNTO 0);
     bot : IN STD_LOGIC_VECTOR(127 DOWNTO 0);
-    Dout : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    sda : INOUT STD_LOGIC;
-    scl : INOUT STD_LOGIC
+    lcd_data : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+    lcd_rs : OUT STD_LOGIC;
+    lcd_en : OUT STD_LOGIC;
+    lcd_on : OUT STD_LOGIC;
+    lcd_blon : OUT STD_LOGIC;
+    lcd_rw : OUT STD_LOGIC;
+    SDA : INOUT STD_LOGIC;
+    SCL : INOUT STD_LOGIC
   );
 END top_level_i2c_LCD_controller_0_0;
 
@@ -69,14 +74,22 @@ ARCHITECTURE top_level_i2c_LCD_controller_0_0_arch OF top_level_i2c_LCD_controll
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF top_level_i2c_LCD_controller_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT i2c_LCD_controller IS
+    GENERIC (
+      input_clk : INTEGER
+    );
     PORT (
-      clk : IN STD_LOGIC;
       reset : IN STD_LOGIC;
+      clk : IN STD_LOGIC;
       top : IN STD_LOGIC_VECTOR(127 DOWNTO 0);
       bot : IN STD_LOGIC_VECTOR(127 DOWNTO 0);
-      Dout : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-      sda : INOUT STD_LOGIC;
-      scl : INOUT STD_LOGIC
+      lcd_data : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+      lcd_rs : OUT STD_LOGIC;
+      lcd_en : OUT STD_LOGIC;
+      lcd_on : OUT STD_LOGIC;
+      lcd_blon : OUT STD_LOGIC;
+      lcd_rw : OUT STD_LOGIC;
+      SDA : INOUT STD_LOGIC;
+      SCL : INOUT STD_LOGIC
     );
   END COMPONENT i2c_LCD_controller;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -87,13 +100,21 @@ ARCHITECTURE top_level_i2c_LCD_controller_0_0_arch OF top_level_i2c_LCD_controll
   ATTRIBUTE X_INTERFACE_INFO OF reset: SIGNAL IS "xilinx.com:signal:reset:1.0 reset RST";
 BEGIN
   U0 : i2c_LCD_controller
+    GENERIC MAP (
+      input_clk => 50000000
+    )
     PORT MAP (
-      clk => clk,
       reset => reset,
+      clk => clk,
       top => top,
       bot => bot,
-      Dout => Dout,
-      sda => sda,
-      scl => scl
+      lcd_data => lcd_data,
+      lcd_rs => lcd_rs,
+      lcd_en => lcd_en,
+      lcd_on => lcd_on,
+      lcd_blon => lcd_blon,
+      lcd_rw => lcd_rw,
+      SDA => SDA,
+      SCL => SCL
     );
 END top_level_i2c_LCD_controller_0_0_arch;
